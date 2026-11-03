@@ -198,10 +198,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('senderName').value.trim();
-      const email = document.getElementById('senderEmail').value.trim();
-      const subject = document.getElementById('subject').value.trim() || 'Portfolio Inquiry';
-      const message = document.getElementById('message').value.trim();
+      const name = document.getElementById('senderName')?.value?.trim() || 'Anonymous';
+      const email = document.getElementById('senderEmail')?.value?.trim() || '';
+      const subjectEl = document.getElementById('subject');
+      const subject = (subjectEl && subjectEl.value.trim()) || 'Portfolio Inquiry';
+      const message = document.getElementById('message')?.value?.trim() || '';
 
       const mailtoUrl = `mailto:kundansawvks786@gmail.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
       window.location.href = mailtoUrl;

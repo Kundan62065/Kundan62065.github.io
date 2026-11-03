@@ -27,54 +27,49 @@
 </head>
 <body>
 
-  <!-- STICKY HEADER (Always visible when scrolling down) -->
+  <!-- STICKY HEADER (Neat, clean, and properly spaced) -->
   <header id="mainHeader">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo -->
-      <a href="#hero" class="flex items-center gap-2.5">
-        <span class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-600 text-sm">
+      <!-- Brand Logo (Clean: No extra developer portfolio subtitle) -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <span class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-600 dark:text-emerald-400 text-sm group-hover:scale-105 transition-transform shadow-sm">
           &lt;/&gt;
         </span>
-        <div class="flex flex-col">
-          <span class="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">
-            Kundan Saw
-          </span>
-          <span class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold uppercase tracking-wider">
-            Developer Portfolio
-          </span>
-        </div>
+        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white">
+          Kundan Saw
+        </span>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300">
-        <a href="#about" class="hover:text-emerald-600 transition-colors">About</a>
-        <a href="#projects" class="hover:text-emerald-600 transition-colors">Projects</a>
-        <a href="#skills" class="hover:text-emerald-600 transition-colors">Skills</a>
-        <a href="#leadership" class="hover:text-emerald-600 transition-colors">Leadership</a>
-        <a href="#contact" class="hover:text-emerald-600 transition-colors">Contact</a>
+      <!-- Desktop Nav (Clean generous spacing) -->
+      <nav class="hidden md:flex items-center gap-10 text-sm font-semibold text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About</a>
+        <a href="#projects" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Skills</a>
+        <a href="#leadership" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Leadership</a>
+        <a href="#contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact</a>
       </nav>
 
-      <!-- Right Header Actions (Day/Night Toggle + Resume + Connect) -->
-      <div class="flex items-center gap-3">
+      <!-- Right Header Actions (Spaced & Aligned) -->
+      <div class="flex items-center gap-4 sm:gap-5">
         
         <!-- Day / Night Toggle Button -->
         <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Day and Night theme" title="Toggle Light / Dark mode">
-          <!-- Sun Icon (Shown in Dark Mode to switch to light) -->
+          <!-- Sun Icon (Shown in Dark Mode) -->
           <svg id="sunIcon" class="w-5 h-5 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
           </svg>
-          <!-- Moon Icon (Shown in Light Mode to switch to dark) -->
+          <!-- Moon Icon (Shown in Light Mode) -->
           <svg id="moonIcon" class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
           </svg>
         </button>
 
-        <a href="resume.html" class="hidden sm:inline-flex px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-emerald-500 transition-all">
+        <a href="resume.html" class="hidden sm:inline-flex px-4 py-2 text-xs font-mono font-bold rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-emerald-500 shadow-sm transition-all">
           /resume
         </a>
 
-        <a href="#contact" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono transition-all">
+        <a href="#contact" class="px-4 py-2 text-xs font-bold rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono shadow-sm transition-all">
           Connect
         </a>
 
@@ -90,81 +85,81 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden md:hidden px-4 pt-2 pb-4 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 space-y-2 text-sm font-semibold">
-      <a href="#about" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">About</a>
-      <a href="#projects" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Projects</a>
-      <a href="#skills" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Skills</a>
-      <a href="#leadership" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Leadership</a>
-      <a href="#contact" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Contact</a>
-      <a href="resume.html" class="block py-1.5 text-emerald-600 font-mono">View /resume.html</a>
+    <div id="mobileDrawer" class="hidden md:hidden px-6 pt-3 pb-5 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 space-y-3 text-sm font-semibold">
+      <a href="#about" class="block py-1 text-slate-700 dark:text-slate-300 hover:text-emerald-600">About</a>
+      <a href="#projects" class="block py-1 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Projects</a>
+      <a href="#skills" class="block py-1 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Skills</a>
+      <a href="#leadership" class="block py-1 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Leadership</a>
+      <a href="#contact" class="block py-1 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Contact</a>
+      <a href="resume.html" class="block py-1 text-emerald-600 font-mono">View /resume.html</a>
     </div>
   </header>
 
   <main>
 
     <!-- HERO SECTION -->
-    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <section id="hero" class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
         <!-- Left Hero Content -->
-        <div class="lg:col-span-7 space-y-5">
+        <div class="lg:col-span-7 space-y-6">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
-            <span class="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold tracking-wide">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
             Available for Software Engineering Roles
           </div>
 
-          <div class="space-y-1">
-            <p class="font-mono text-sm text-slate-500 dark:text-slate-400">Hello World! I'm</p>
+          <div class="space-y-2">
+            <p class="font-mono text-sm text-slate-500 dark:text-slate-400 font-medium">Hello World! I'm</p>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Kundan Saw
             </h1>
             <p class="text-xl sm:text-2xl font-bold gradient-text pt-1">
-              Full-Stack, Real-Time & Salesforce Developer
+              Full-Stack, Real-Time &amp; Salesforce Developer
             </p>
           </div>
 
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
-            Computer Engineering student at <strong>NIAMT Ranchi</strong> (CGPA <strong>8.65</strong>). I build full-stack web platforms, Salesforce CRM systems, and real-time operations software like <strong>DutyHours.in</strong> for Indian Railways.
+          <p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+            Computer Engineering student at <strong>NIAMT Ranchi</strong> (CGPA: <strong>8.65</strong>). I build full-stack web platforms, Salesforce CRM systems, and real-time operations software like <strong>DutyHours.in</strong> for Indian Railways.
           </p>
 
           <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="#projects" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm tracking-wide shadow-sm transition-all flex items-center gap-1.5">
+          <div class="flex flex-wrap items-center gap-3.5 pt-2">
+            <a href="#projects" class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm tracking-wide shadow-sm transition-all flex items-center gap-2">
               <span>View Projects</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
 
-            <a href="resume.html" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-emerald-500 font-mono text-xs sm:text-sm font-semibold transition-all">
+            <a href="resume.html" class="px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-emerald-500 font-mono text-xs sm:text-sm font-semibold transition-all">
               Resume (/resume)
             </a>
 
-            <a href="https://github.com/Kundan62065" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-all" aria-label="GitHub">
+            <a href="https://github.com/Kundan62065" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-all" aria-label="GitHub">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
 
-            <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-all" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-all" aria-label="LinkedIn">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
 
-            <a href="https://leetcode.com/u/Kundan_kumar-saw0/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-amber-500 transition-all" aria-label="LeetCode">
+            <a href="https://leetcode.com/u/Kundan_kumar-saw0/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-amber-500 transition-all" aria-label="LeetCode">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .666-1.795l3.774-4.04 4.346-4.652c.546-.546.546-1.43 0-1.976A1.378 1.378 0 0 0 13.483 0zm-2.88 5.9a1.376 1.376 0 0 0-1.023.55L4.472 11.9a1.38 1.38 0 1 0 2.062 1.834l5.108-5.45a1.378 1.378 0 0 0-1.039-2.384z"/></svg>
             </a>
           </div>
 
           <!-- Quick Stats -->
-          <div class="grid grid-cols-3 gap-3 pt-3 border-t border-slate-200 dark:border-slate-800">
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <div class="text-xl font-bold font-mono text-emerald-600 dark:text-emerald-400">8.65</div>
-              <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">NIAMT CGPA</div>
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400">8.65</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">NIAMT CGPA</div>
             </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <div class="text-xl font-bold font-mono text-cyan-600 dark:text-cyan-400">5</div>
-              <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Projects Built</div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="text-2xl font-bold font-mono text-cyan-600 dark:text-cyan-400">5</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Projects Built</div>
             </div>
-            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <div class="text-xl font-bold font-mono text-indigo-600 dark:text-indigo-400">3+</div>
-              <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Leadership Roles</div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="text-2xl font-bold font-mono text-indigo-600 dark:text-indigo-400">3+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Leadership Roles</div>
             </div>
           </div>
 
@@ -175,7 +170,7 @@
           <div class="terminal-card">
             
             <!-- Terminal Header -->
-            <div class="bg-[#1e293b] px-4 py-2.5 border-b border-slate-700 flex items-center justify-between">
+            <div class="bg-[#1e293b] px-4 py-3 border-b border-slate-700 flex items-center justify-between">
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
                 <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
@@ -189,27 +184,27 @@
 
             <!-- Terminal Tabs -->
             <div class="flex border-b border-slate-700 bg-[#0f172a] text-xs font-mono">
-              <button class="terminal-tab active px-3.5 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="whoami">
+              <button class="terminal-tab active px-4 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="whoami">
                 <span class="text-emerald-400">$</span> whoami
               </button>
-              <button class="terminal-tab px-3.5 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="skills">
+              <button class="terminal-tab px-4 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="skills">
                 <span class="text-cyan-400">$</span> skills
               </button>
-              <button class="terminal-tab px-3.5 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="railway">
+              <button class="terminal-tab px-4 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="railway">
                 <span class="text-amber-400">$</span> dutyhours
               </button>
-              <button class="terminal-tab px-3.5 py-2 flex items-center gap-1.5" data-tab="audit">
+              <button class="terminal-tab px-4 py-2 flex items-center gap-1.5" data-tab="audit">
                 <span class="text-indigo-400">$</span> web3
               </button>
             </div>
 
             <!-- Terminal Screen -->
-            <div class="p-4 font-mono text-xs text-slate-200 min-h-[220px]" id="terminalScreen">
-              <div class="space-y-2">
+            <div class="p-5 font-mono text-xs text-slate-200 min-h-[220px]" id="terminalScreen">
+              <div class="space-y-2.5">
                 <div class="text-slate-400">
                   <span class="text-emerald-400">kundan@dev</span>:<span class="text-cyan-400">~</span>$ whoami
                 </div>
-                <div class="text-emerald-300 font-semibold">
+                <div class="text-emerald-300 font-semibold text-sm">
                   Kundan Saw (B.Tech Computer Engineering, NIAMT Ranchi)
                 </div>
                 <p class="text-slate-300 leading-relaxed text-xs">
@@ -222,9 +217,9 @@
               </div>
             </div>
 
-            <div class="bg-[#1e293b] px-4 py-1.5 border-t border-slate-700 flex items-center justify-between text-[10px] font-mono text-slate-400">
-              <span>Click tabs above to inspect</span>
-              <span class="text-emerald-400">zsh</span>
+            <div class="bg-[#1e293b] px-4 py-2 border-t border-slate-700 flex items-center justify-between text-[11px] font-mono text-slate-400">
+              <span>Click tabs to switch views</span>
+              <span class="text-emerald-400 font-semibold">zsh</span>
             </div>
 
           </div>
@@ -234,31 +229,35 @@
     </section>
 
     <!-- TECH TICKER MARQUEE -->
-    <section class="py-4 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
-      <div class="flex whitespace-nowrap animate-marquee gap-8 text-xs font-mono font-medium text-slate-600 dark:text-slate-300">
-        <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✦</span> DutyHours.in (Socket.IO)</span>
-        <span class="flex items-center gap-1.5"><span class="text-cyan-600 font-bold">✦</span> React.js & Node.js</span>
-        <span class="flex items-center gap-1.5"><span class="text-indigo-600 font-bold">✦</span> Salesforce DX & Apex</span>
-        <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✦</span> Solidity 0.8.20</span>
-        <span class="flex items-center gap-1.5"><span class="text-cyan-600 font-bold">✦</span> MongoDB & Express</span>
-        <span class="flex items-center gap-1.5"><span class="text-indigo-600 font-bold">✦</span> Java & C++</span>
-        <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✦</span> Flows & SOQL</span>
-        <span class="flex items-center gap-1.5"><span class="text-cyan-600 font-bold">✦</span> JWT & Razorpay</span>
+    <section class="py-5 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
+      <div class="flex whitespace-nowrap animate-marquee gap-10 text-xs font-mono font-medium text-slate-600 dark:text-slate-300">
+        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> DutyHours.in (Socket.IO)</span>
+        <span class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✦</span> React.js &amp; Node.js</span>
+        <span class="flex items-center gap-2"><span class="text-indigo-600 font-bold">✦</span> Salesforce DX &amp; Apex</span>
+        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> Solidity 0.8.20</span>
+        <span class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✦</span> MongoDB &amp; Express</span>
+        <span class="flex items-center gap-2"><span class="text-indigo-600 font-bold">✦</span> Java &amp; C++</span>
+        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> Flows &amp; SOQL</span>
+        <span class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✦</span> JWT &amp; Razorpay</span>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS SHOWCASE (TUDDU CARDS) -->
-    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- SECTION 1: FEATURED PROJECTS (TUDDU CARDS) -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24 sm:py-28">
       
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-        <div>
-          <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+      <!-- Section Header with Distinct Title & Subtitle Colors -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div class="space-y-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
             Portfolio Work
           </span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Featured Projects
           </h2>
+          <!-- Subtitle in Distinct Color (Cyan) -->
+          <p class="text-cyan-700 dark:text-cyan-400 font-medium text-base sm:text-lg">
+            Production systems across real-time operations, Web3 security, and enterprise CRM.
+          </p>
         </div>
 
         <!-- Filter Tabs -->
@@ -271,8 +270,8 @@
         </div>
       </div>
 
-      <!-- Projects Grid (Tuddu Style) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Projects Grid (Tuddu Style with Generous Gaps) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
 
         <!-- 1. TUDDU: DUTYHOURS.IN (RAILWAYS SHIFT MANAGEMENT) -->
         <div class="tuddu-card group" data-category="realtime">
@@ -311,19 +310,20 @@
             </svg>
           </div>
 
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
-            <div class="space-y-1.5">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 transition-colors">
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 transition-colors">
                 DutyHours.in (Railway Shift Management)
               </h3>
-              <p class="text-xs text-emerald-700 dark:text-emerald-400 font-mono font-medium">
-                Collaborative project with Rana Poddar for Indian Railways (Hatia Division)
+              <!-- Subtitle in Distinct Color (Cyan) -->
+              <p class="text-xs text-cyan-700 dark:text-cyan-400 font-mono font-semibold">
+                Co-engineered with Rana Poddar for Indian Railways (Hatia Division)
               </p>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Real-time shift tracking & crew fatigue alert platform for locomotive pilots. Features automatic alerts at 8, 9, 11, and 14 hours using Socket.IO, role-based access, and Excel duty logs.
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Real-time shift tracking &amp; crew fatigue alert platform for locomotive pilots. Features automatic alerts at 8, 9, 11, and 14 hours using Socket.IO, role-based access, and Excel duty logs.
               </p>
 
-              <div class="flex flex-wrap gap-1 pt-1">
+              <div class="flex flex-wrap gap-1.5 pt-2">
                 <span class="skill-tag">MERN</span>
                 <span class="skill-tag">Socket.IO</span>
                 <span class="skill-tag">JWT</span>
@@ -331,15 +331,15 @@
               </div>
             </div>
 
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <a href="https://www.dutyhours.in/login" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://www.dutyhours.in/login" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
                 <span>dutyhours.in ↗</span>
               </a>
-              <div class="flex items-center gap-1.5">
-                <a href="https://liver-frontend-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
+              <div class="flex items-center gap-2">
+                <a href="https://liver-frontend-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
                   Demo
                 </a>
-                <a href="https://github.com/Kundan62065/R_frontend" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
+                <a href="https://github.com/Kundan62065/R_frontend" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
                   GitHub
                 </a>
               </div>
@@ -382,19 +382,20 @@
             </svg>
           </div>
 
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
-            <div class="space-y-1.5">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
                 SentinelFund (Crowdfunding DApp)
               </h3>
-              <p class="text-xs text-emerald-700 dark:text-emerald-400 font-mono font-medium">
+              <!-- Subtitle in Distinct Color (Emerald) -->
+              <p class="text-xs text-emerald-700 dark:text-emerald-400 font-mono font-semibold">
                 Solidity 0.8.20 &amp; React 18
               </p>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 Decentralized crowdfunding application with built-in reentrancy protection, milestone-based voting before fund withdrawal, and safe pull payments for refunds.
               </p>
 
-              <div class="flex flex-wrap gap-1 pt-1">
+              <div class="flex flex-wrap gap-1.5 pt-2">
                 <span class="skill-tag">Solidity</span>
                 <span class="skill-tag">Web3.js</span>
                 <span class="skill-tag">React</span>
@@ -402,8 +403,8 @@
               </div>
             </div>
 
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
                 <span>GitHub Repo ↗</span>
               </a>
               <span class="text-slate-400 font-mono text-[11px]">Audit Tested</span>
@@ -452,19 +453,20 @@
             </svg>
           </div>
 
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
-            <div class="space-y-1.5">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 transition-colors">
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 transition-colors">
                 Hospital Operations CRM
               </h3>
-              <p class="text-xs text-indigo-700 dark:text-indigo-400 font-mono font-medium">
+              <!-- Subtitle in Distinct Color (Indigo) -->
+              <p class="text-xs text-indigo-700 dark:text-indigo-400 font-mono font-semibold">
                 Salesforce DX, Apex &amp; Flows
               </p>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 Hospital management system built on Salesforce. Automates patient appointments, doctor scheduling, and billing invoices with Apex Triggers and Record-Triggered Flows.
               </p>
 
-              <div class="flex flex-wrap gap-1 pt-1">
+              <div class="flex flex-wrap gap-1.5 pt-2">
                 <span class="skill-tag">Salesforce DX</span>
                 <span class="skill-tag">Apex</span>
                 <span class="skill-tag">Flows</span>
@@ -472,8 +474,8 @@
               </div>
             </div>
 
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <a href="https://github.com/Kundan62065/Hospital-Management-Salesforce" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://github.com/Kundan62065/Hospital-Management-Salesforce" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
                 <span>GitHub Repo ↗</span>
               </a>
               <span class="text-slate-400 font-mono text-[11px]">Teqfocus Cert</span>
@@ -516,29 +518,29 @@
             </svg>
           </div>
 
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
-            <div class="space-y-1.5">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">
                 MERN Note App
               </h3>
-              <p class="text-xs text-teal-700 dark:text-teal-400 font-mono font-medium">
+              <!-- Subtitle in Distinct Color (Teal) -->
+              <p class="text-xs text-teal-700 dark:text-teal-400 font-mono font-semibold">
                 React, Node.js, Express &amp; MongoDB
               </p>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 Cloud notes application with instant Google OAuth and JWT authentication. Allows creating, searching, categorizing notes, and copying content with one tap.
               </p>
 
-              <div class="flex flex-wrap gap-1 pt-1">
+              <div class="flex flex-wrap gap-1.5 pt-2">
                 <span class="skill-tag">MongoDB</span>
                 <span class="skill-tag">Express</span>
                 <span class="skill-tag">React</span>
                 <span class="skill-tag">Node</span>
-                <span class="skill-tag">OAuth</span>
               </div>
             </div>
 
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <a href="https://github.com/Kundan62065/mern-jwt-notes-app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://github.com/Kundan62065/mern-jwt-notes-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
                 <span>GitHub Repo ↗</span>
               </a>
               <span class="text-slate-400 font-mono text-[11px]">Personal Project</span>
@@ -582,19 +584,20 @@
             </svg>
           </div>
 
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
-            <div class="space-y-1.5">
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 transition-colors">
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 transition-colors">
                 Mini-eKart App
               </h3>
-              <p class="text-xs text-amber-700 dark:text-amber-400 font-mono font-medium">
+              <!-- Subtitle in Distinct Color (Amber) -->
+              <p class="text-xs text-amber-700 dark:text-amber-400 font-mono font-semibold">
                 MERN, Razorpay &amp; Cloudinary
               </p>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 Online shopping web store with product filters, cart management, Cloudinary image upload, and Razorpay payment integration with an admin CRUD panel.
               </p>
 
-              <div class="flex flex-wrap gap-1 pt-1">
+              <div class="flex flex-wrap gap-1.5 pt-2">
                 <span class="skill-tag">React</span>
                 <span class="skill-tag">Node</span>
                 <span class="skill-tag">Razorpay</span>
@@ -602,11 +605,11 @@
               </div>
             </div>
 
-            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-              <a href="https://mini-ekart-app-wv57.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://mini-ekart-app-wv57.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
                 <span>Live Demo ↗</span>
               </a>
-              <a href="https://github.com/Kundan62065/MINI-EKART-APP" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
+              <a href="https://github.com/Kundan62065/MINI-EKART-APP" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
                 GitHub
               </a>
             </div>
@@ -617,182 +620,281 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-        <div class="lg:col-span-6 space-y-4">
-          <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
-            About Me
+    <!-- SECTION 2: ABOUT SECTION -->
+    <section id="about" class="section-divider py-24 sm:py-28">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="max-w-3xl space-y-3 mb-14">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-400 font-mono text-xs font-bold uppercase tracking-wider">
+            Background &amp; Education
           </span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Building software with clean code and real-world impact.
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Building Software With Clean Code
           </h2>
-          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            I am currently in my 3rd year pursuing B.Tech in <strong>Computer Engineering</strong> at <strong>NIAMT Ranchi</strong> (CGPA: <strong>8.65</strong>).
+          <!-- Subtitle in Distinct Color (Indigo) -->
+          <p class="text-indigo-600 dark:text-indigo-400 font-semibold text-base sm:text-lg">
+            Driven by real-world operational challenges, reliable architecture, and continuous learning.
           </p>
-          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            I enjoy building software that solves practical operational challenges—whether it's managing real-time duty shifts for Indian Railways with socket events, building enterprise CRM processes on Salesforce, or developing responsive full-stack MERN applications.
-          </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <div class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-bold">College Education</div>
-              <div class="font-bold text-slate-900 dark:text-white text-sm">NIAMT Ranchi</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400">B.Tech (2023–2027) • CGPA: 8.65</div>
-            </div>
-            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <div class="font-mono text-xs text-cyan-600 dark:text-cyan-400 font-bold">Schooling</div>
-              <div class="font-bold text-slate-900 dark:text-white text-sm">SRK D.A.V Public School</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400">CBSE Class XII (2022) • 81%</div>
-            </div>
-          </div>
         </div>
 
-        <!-- Skills Overview Card -->
-        <div class="lg:col-span-6">
-          <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
-            <h3 class="text-base font-bold text-slate-900 dark:text-white">Technical Focus</h3>
-            
-            <div class="space-y-3 text-xs">
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-                <div class="font-bold text-cyan-600 dark:text-cyan-400">Real-Time Systems &amp; Web Development</div>
-                <p class="text-slate-600 dark:text-slate-400 mt-0.5">React 18, Node.js, Express, Socket.IO, MongoDB, Tailwind CSS, REST APIs.</p>
-              </div>
-
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-                <div class="font-bold text-indigo-600 dark:text-indigo-400">Salesforce Platform Development</div>
-                <p class="text-slate-600 dark:text-slate-400 mt-0.5">Salesforce DX, Apex Triggers, SOQL, Record-Triggered Flows, OWD Security Model.</p>
-              </div>
-
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-                <div class="font-bold text-emerald-600 dark:text-emerald-400">Web3 &amp; Smart Contracts</div>
-                <p class="text-slate-600 dark:text-slate-400 mt-0.5">Solidity 0.8.20, Web3.js, Checks-Effects-Interactions (CEI), Reentrancy Mutex guards.</p>
-              </div>
-
-              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-                <div class="font-bold text-amber-600 dark:text-amber-400">Core Languages &amp; Tools</div>
-                <p class="text-slate-600 dark:text-slate-400 mt-0.5">Java, C, C++, JavaScript (ES6+), Python, Git, GitHub Actions, Vercel.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- LEADERSHIP & COMMUNITY -->
-    <section id="leadership" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <div class="mb-8">
-        <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
-          Community &amp; College Roles
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
-          Leadership &amp; Activities
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
-        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
-          <div class="text-emerald-600 dark:text-emerald-400 font-bold text-sm">Technical Leader</div>
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm">Code Forge @ NIAMT</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400">Led coding community sessions, guided peers in web development and basic smart contract concepts.</p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
-          <div class="text-cyan-600 dark:text-cyan-400 font-bold text-sm">Awareness Coordinator</div>
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm">Cybersecurity Programs</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400">Conducted student workshops on digital hygiene, strong password habits, and phishing prevention.</p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
-          <div class="text-indigo-600 dark:text-indigo-400 font-bold text-sm">Sports Secretary</div>
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm">SFU Gymkhana (2025–26)</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400">Organized campus football and chess tournaments, managing event logistics and teams.</p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
-          <div class="text-amber-600 dark:text-amber-400 font-bold text-sm">Cultural Head</div>
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm">Mission Kartavya (NGO)</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400">Coordinated educational outreach and Kartavya-Tech activities for student community welfare.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="p-6 sm:p-10 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div class="lg:col-span-6 space-y-4">
-            <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
-              Get in Touch
-            </span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Let's connect.
-            </h2>
-            <p class="text-sm text-slate-600 dark:text-slate-300">
-              Feel free to reach out for software engineering roles, project collaboration, or just to say hi.
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div class="lg:col-span-7 space-y-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p>
+              I am currently in my 3rd year pursuing B.Tech in <strong>Computer Engineering</strong> at <strong>National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi</strong> with an academic CGPA of <strong>8.65 / 10</strong>.
             </p>
+            <p>
+              My engineering approach centers around building practical software that solves real operational bottlenecks. Together with Rana Poddar, I co-engineered <strong>DutyHours.in</strong> to digitize shift logging and manage fatigue warnings for locomotive pilots in Indian Railways (Hatia Division).
+            </p>
+            <p>
+              Whether structuring event-driven architectures with Socket.IO, automating healthcare records using Salesforce Apex and Flows, or writing verified Solidity smart contracts, I emphasize clean code, modular design, and robust security.
+            </p>
+          </div>
 
-            <div class="space-y-2 font-mono text-xs">
-              <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
-                <span>✉ <a href="mailto:kundansawvks786@gmail.com" class="text-slate-900 dark:text-white font-bold hover:text-emerald-600">kundansawvks786@gmail.com</a></span>
-                <button class="copy-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-copy="kundansawvks786@gmail.com">Copy</button>
+          <div class="lg:col-span-5 space-y-4">
+            <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider">B.Tech Degree</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 font-mono text-xs font-bold">CGPA: 8.65</span>
               </div>
-
-              <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
-                <span>📞 <a href="tel:+916206597310" class="text-slate-900 dark:text-white font-bold hover:text-cyan-600">+91 6206597310</a></span>
-                <button class="copy-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-copy="+916206597310">Copy</button>
-              </div>
+              <div class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">NIAMT Ranchi</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">Computer Engineering (2023–2027) • 3rd Year</div>
             </div>
 
-            <div class="flex items-center gap-3 pt-2">
-              <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-mono font-bold hover:border-emerald-500">
-                LinkedIn ↗
-              </a>
-              <a href="https://github.com/Kundan62065" target="_blank" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-mono font-bold hover:border-emerald-500">
-                GitHub ↗
-              </a>
-              <a href="resume.html" class="px-3.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold">
-                View /resume
-              </a>
+            <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-cyan-600 dark:text-cyan-400 font-bold uppercase tracking-wider">Senior Secondary</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-300 dark:border-cyan-800 text-cyan-700 dark:text-cyan-400 font-mono text-xs font-bold">81.0%</span>
+              </div>
+              <div class="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">SRK D.A.V Public School</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">CBSE Class XII (PCM) • 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SKILLS SECTION (Dedicated section matching header nav) -->
+    <section id="skills" class="section-divider py-24 sm:py-28">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        
+        <div class="space-y-3 mb-16">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
+            Technical Stack
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Skills &amp; Technologies
+          </h2>
+          <!-- Subtitle in Distinct Color (Emerald) -->
+          <p class="text-emerald-700 dark:text-emerald-400 font-semibold text-base sm:text-lg">
+            Production toolset across full-stack web, Salesforce CRM, and smart contract development.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Card 1: Web & Real-Time -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4 hover:border-cyan-500 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400 font-bold text-lg">
+              ⚡
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-bold text-slate-900 dark:text-white text-base">Full-Stack &amp; Real-Time</h3>
+              <p class="text-xs text-cyan-700 dark:text-cyan-400 font-medium">Event-driven web applications</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">Socket.IO</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">REST APIs</span>
             </div>
           </div>
 
-          <div class="lg:col-span-6">
-            <form id="contactForm" class="p-5 sm:p-6 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-3">
-              <h3 class="font-bold text-slate-900 dark:text-white text-sm">Send a Message</h3>
-              
-              <input type="text" id="senderName" required placeholder="Your Name" class="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500">
-              
-              <input type="email" id="senderEmail" required placeholder="Your Email" class="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500">
-              
-              <textarea id="message" rows="3" required placeholder="Your Message..." class="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500"></textarea>
+          <!-- Card 2: Salesforce Platform -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4 hover:border-indigo-500 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-lg">
+              ☁️
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-bold text-slate-900 dark:text-white text-base">Salesforce CRM</h3>
+              <p class="text-xs text-indigo-700 dark:text-indigo-400 font-medium">Enterprise workflows &amp; logic</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="skill-tag">Salesforce DX</span>
+              <span class="skill-tag">Apex Triggers</span>
+              <span class="skill-tag">Record Flows</span>
+              <span class="skill-tag">SOQL</span>
+              <span class="skill-tag">OWD Sharing</span>
+              <span class="skill-tag">Custom Objects</span>
+            </div>
+          </div>
 
-              <button type="submit" class="w-full py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold font-mono text-xs cursor-pointer transition-all">
-                Send Email Dispatch ⚡
-              </button>
-            </form>
+          <!-- Card 3: Web3 & Security -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4 hover:border-emerald-500 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-bold text-lg">
+              🛡️
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-bold text-slate-900 dark:text-white text-base">Web3 &amp; Security</h3>
+              <p class="text-xs text-emerald-700 dark:text-emerald-400 font-medium">Smart contracts &amp; safe patterns</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="skill-tag">Solidity 0.8.20</span>
+              <span class="skill-tag">Web3.js</span>
+              <span class="skill-tag">CEI Pattern</span>
+              <span class="skill-tag">Pull Payments</span>
+              <span class="skill-tag">SWC-107 Guard</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Core Languages & DevOps -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4 hover:border-amber-500 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 font-bold text-lg">
+              ⚙️
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-bold text-slate-900 dark:text-white text-base">Languages &amp; Tools</h3>
+              <p class="text-xs text-amber-700 dark:text-amber-400 font-medium">Core foundations &amp; deployment</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Vercel</span>
+            </div>
           </div>
 
         </div>
+      </div>
+    </section>
 
+    <!-- SECTION 3: LEADERSHIP & COMMUNITY (Generous spacing & distinct header colors) -->
+    <section id="leadership" class="section-divider py-24 sm:py-28">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        
+        <div class="space-y-2 mb-16">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">
+            Campus &amp; Community
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Leadership &amp; Roles
+          </h2>
+          <!-- Subtitle in Distinct Color (Amber) -->
+          <p class="text-amber-600 dark:text-amber-400 font-semibold text-base sm:text-lg">
+            Mentorship, sports governance, and student community outreach.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-3 shadow-sm hover:border-emerald-500 transition-all">
+            <div class="text-emerald-600 dark:text-emerald-400 font-bold text-xs font-mono uppercase tracking-wider">Technical Leader</div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Code Forge @ NIAMT</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Led coding community sessions, guided peers in web development and basic smart contract concepts.</p>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-3 shadow-sm hover:border-cyan-500 transition-all">
+            <div class="text-cyan-600 dark:text-cyan-400 font-bold text-xs font-mono uppercase tracking-wider">Awareness Coordinator</div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Cybersecurity Programs</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Conducted student workshops on digital hygiene, strong password habits, and phishing prevention.</p>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-3 shadow-sm hover:border-indigo-500 transition-all">
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold text-xs font-mono uppercase tracking-wider">Sports Secretary</div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">SFU Gymkhana (2025–26)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Organized campus football and chess tournaments, managing event logistics and university sports teams.</p>
+          </div>
+
+          <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-3 shadow-sm hover:border-amber-500 transition-all">
+            <div class="text-amber-600 dark:text-amber-400 font-bold text-xs font-mono uppercase tracking-wider">Cultural Head</div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">Mission Kartavya (NGO)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Coordinated educational outreach and Kartavya-Tech activities for student community welfare.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CONTACT (Spaced & Clean) -->
+    <section id="contact" class="section-divider py-24 sm:py-28">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="p-8 sm:p-12 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div class="lg:col-span-6 space-y-5">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
+                Get in Touch
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                Let's Connect &amp; Collaborate
+              </h2>
+              <!-- Subtitle in Distinct Color (Emerald) -->
+              <p class="text-emerald-700 dark:text-emerald-400 font-semibold text-base sm:text-lg">
+                Open for software engineering roles and technical discussions.
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Feel free to reach out via email or phone for software engineering opportunities, projects, or discussions.
+              </p>
+
+              <div class="space-y-3 font-mono text-xs pt-1">
+                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                  <span>✉ <a href="mailto:kundansawvks786@gmail.com" class="text-slate-900 dark:text-white font-bold hover:text-emerald-600">kundansawvks786@gmail.com</a></span>
+                  <button class="copy-btn px-2.5 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold cursor-pointer" data-copy="kundansawvks786@gmail.com">Copy</button>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                  <span>📞 <a href="tel:+916206597310" class="text-slate-900 dark:text-white font-bold hover:text-cyan-600">+91 6206597310</a></span>
+                  <button class="copy-btn px-2.5 py-1 rounded-md bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold cursor-pointer" data-copy="+916206597310">Copy</button>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3.5 pt-3">
+                <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-mono font-bold hover:border-emerald-500 shadow-sm transition-all">
+                  LinkedIn ↗
+                </a>
+                <a href="https://github.com/Kundan62065" target="_blank" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-mono font-bold hover:border-emerald-500 shadow-sm transition-all">
+                  GitHub ↗
+                </a>
+                <a href="resume.html" class="px-4 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold shadow-sm transition-all">
+                  View /resume
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6">
+              <form id="contactForm" class="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-4">
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">Send Direct Message</h3>
+                
+                <input type="text" id="senderName" required placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500 shadow-sm">
+                
+                <input type="email" id="senderEmail" required placeholder="Your Email" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500 shadow-sm">
+                
+                <textarea id="message" rows="3" required placeholder="Your Message..." class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500 shadow-sm"></textarea>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold font-mono text-xs cursor-pointer shadow-sm transition-all">
+                  Send Email Dispatch ⚡
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 text-xs font-mono text-slate-500 text-center">
-    <div>© 2026 Kundan Saw • NIAMT Ranchi • Built with clean code</div>
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-10 text-xs font-mono text-slate-500 text-center">
+    <div class="max-w-7xl mx-auto px-6">© 2026 Kundan Saw • NIAMT Ranchi • Computer Engineering</div>
   </footer>
 
   <!-- Toast -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 px-4 py-2 rounded-lg bg-emerald-600 text-white font-mono text-xs font-bold shadow-lg">
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-mono text-xs font-bold shadow-xl">
     <span id="toastMessage">Copied!</span>
   </div>
 
