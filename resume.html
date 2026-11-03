@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kundan Saw - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b0f19;
+      color: #e2e8f0;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .resume-wrapper {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #10b981;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .name-title h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .name-title p {
+      color: #10b981;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+    .contact-links {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      text-align: right;
+    }
+    .contact-links a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+    .action-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      justify-content: flex-end;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: #10b981;
+      color: #022c22;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: #34d399;
+    }
+    .btn-secondary {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #334155;
+    }
+    .btn-secondary:hover {
+      background: #334155;
+      color: #fff;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-title span {
+      color: #10b981;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .item {
+      margin-bottom: 1.25rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+    .item-title {
+      font-weight: 700;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+    }
+    .item-subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #38bdf8;
+    }
+    .item-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+    .item ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-top: 0.4rem;
+    }
+    .item ul li {
+      margin-bottom: 0.35rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+    .skill-cat {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .skill-cat-title {
+      font-weight: 700;
+      color: #10b981;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      margin-bottom: 0.35rem;
+    }
+    @media print {
+      body { background: #fff; color: #000; padding: 0; }
+      .resume-wrapper { border: none; box-shadow: none; background: #fff; padding: 0; color: #000; }
+      .action-bar { display: none; }
+      .name-title h1 { color: #000; }
+      .name-title p { color: #059669; }
+      .section-title { color: #000; border-bottom: 1px solid #000; }
+      .item-title { color: #000; }
+      .item-subtitle { color: #0284c7; }
+      .item ul { color: #333; }
+      .skill-cat { background: #f8fafc; border: 1px solid #e2e8f0; color: #000; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-wrapper">
+
+    <!-- Action Bar (Hidden when printing) -->
+    <div class="action-bar">
+      <a href="index.html" class="btn btn-secondary">← Back to Portfolio</a>
+      <a href="resume.pdf" target="_blank" class="btn btn-primary" download>⬇ Download Official PDF</a>
+      <button onclick="window.print()" class="btn btn-secondary">🖨 Print View</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header-bar">
+      <div class="name-title">
+        <h1>Kundan Saw</h1>
+        <p>Cybersecurity & Web3 Developer • Full-Stack Engineer • Salesforce</p>
+      </div>
+      <div class="contact-links">
+        <div>📞 +91-6206597310</div>
+        <div>✉ <a href="mailto:kundansawvks786@gmail.com">kundansawvks786@gmail.com</a></div>
+        <div>🔗 <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank">linkedin.com/in/kundan-saw-35a604284</a></div>
+        <div>🐙 <a href="https://github.com/Kundan62065" target="_blank">github.com/Kundan62065</a></div>
+        <div>⚡ <a href="https://leetcode.com/u/Kundan_kumar-saw0/" target="_blank">leetcode.com/u/Kundan_kumar-saw0</a></div>
+        <div>🌐 <a href="https://kundansaw.me/" target="_blank">kundansaw.me</a></div>
+        <div>📍 Ranchi, Jharkhand, India</div>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title"><span>//</span> Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">B.Tech in Computer Engineering</span> — <span class="item-subtitle">NIAMT Ranchi</span>
+          </div>
+          <span class="item-date">2023 – 2027 (Ongoing) | CGPA: 8.65</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Senior Secondary (CBSE Class XII)</span> — <span class="item-subtitle">SRK D.A.V Public School, Suriya Giridih</span>
+          </div>
+          <span class="item-date">2022 | Score: 81%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title"><span>//</span> Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <div class="skill-cat-title">Cybersecurity & Web3</div>
+          <p>Solidity 0.8.20, Web3.js, Smart Contract Auditing, Reentrancy Protection (SWC-107, CEI), Rug-pull Quorum Governance (SWC-105), Pull Payments (SWC-113), STRIDE Threat Modeling, Kali Linux, JWT, OAuth 2.0.</p>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-title">Salesforce Platform</div>
+          <p>Salesforce DX (SFDX), Apex Triggers & Handler Pattern, SOQL, Record-Triggered & Screen Flows, Organization-Wide Defaults (OWD), Profiles & Permissions, Reports & Executive Dashboards.</p>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-title">Full-Stack Development</div>
+          <p>React 18, Node.js, Express.js, Socket.IO, RESTful APIs, MongoDB Atlas, MySQL, Tailwind CSS, Modern JavaScript (ES6+).</p>
+        </div>
+        <div class="skill-cat">
+          <div class="skill-cat-title">Core Languages & DevOps</div>
+          <p>Java (OOP), C, C++, Python, Git, GitHub Actions, Vercel, Render, Postman, Linux CLI, Google Colab.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title"><span>//</span> Flagship Projects</h2>
+
+      <!-- 1. SentinelFund -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">SentinelFund — Secure Web3 Crowdfunding & Governance DApp</span>
+            <span class="item-subtitle">[Solidity 0.8.20, Web3.js, React 18, STRIDE]</span>
+          </div>
+          <span class="item-date"><a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" style="color:#38bdf8; text-decoration:none;">GitHub ↗</a></span>
+        </div>
+        <ul>
+          <li>Engineered an enterprise-grade defensive crowdfunding protocol defending against <strong>SWC-107 (Reentrancy)</strong> using the <strong>Checks-Effects-Interactions (CEI)</strong> pattern and nonReentrant mutex lock.</li>
+          <li>Mitigated <strong>SWC-105 rug-pull risks</strong> by replacing single-owner withdrawals with milestone spending requests requiring <strong>>50% backer quorum voting</strong>.</li>
+          <li>Eliminated <strong>SWC-113 Denial of Service</strong> attack vectors via a <strong>Pull-over-Push payment architecture</strong> for safe individual refunds.</li>
+          <li>Built a reactive Web3 dashboard with real-time SIEM event telemetry and an emergency circuit breaker.</li>
+        </ul>
+      </div>
+
+      <!-- 2. Railway Shift Management -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Indian Railways Shift & Workforce Management System (DutyHours.in)</span>
+            <span class="item-subtitle">[MERN Stack, Socket.IO, JWT, ExcelJS]</span>
+          </div>
+          <span class="item-date">
+            <a href="https://liver-frontend-eight.vercel.app/" target="_blank" style="color:#10b981; text-decoration:none; margin-right:8px; font-weight:600;">Live Demo ↗</a>
+            <a href="https://github.com/Kundan62065/R_frontend" target="_blank" style="color:#38bdf8; text-decoration:none;">GitHub ↗</a>
+          </span>
+        </div>
+        <ul>
+          <li>Co-engineered real-time crew shift tracking and fatigue management for locomotive staff in Indian Railways (Hatia / Eastern Division) alongside Rana Poddar.</li>
+          <li>Engineered automated fatigue threshold alerts delivered at <strong>8, 9, 11, and 14 hours</strong> via <strong>Socket.IO</strong> push events.</li>
+          <li>Implemented multi-role access control (Super Admin, Station Master, Crew) and automated Excel shift report generation.</li>
+        </ul>
+      </div>
+
+      <!-- 3. Salesforce Hospital CRM -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Hospital Operations & Management CRM</span>
+            <span class="item-subtitle">[Salesforce DX, Apex Handlers, Flows, SOQL, OWD]</span>
+          </div>
+          <span class="item-date"><a href="https://github.com/Kundan62065/Hospital-Management-Salesforce" target="_blank" style="color:#38bdf8; text-decoration:none;">GitHub ↗</a></span>
+        </div>
+        <ul>
+          <li>Built a full clinical operations CRM managing Patients, Doctors, Departments, Appointments, and Billing.</li>
+          <li>Engineered Apex Triggers for collision-free appointment scheduling and Record-Triggered Flows for automated billing invoices.</li>
+          <li>Enforced Organization-Wide Defaults (OWD) and role-based sharing rules to ensure medical data confidentiality.</li>
+        </ul>
+      </div>
+
+      <!-- 4. MERN Note -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">MERN Note — Secure Cloud Workspace</span>
+            <span class="item-subtitle">[MongoDB, Express.js, React.js, Node.js, JWT, OAuth 2.0]</span>
+          </div>
+          <span class="item-date"><a href="https://github.com/Kundan62065/mern-jwt-notes-app" target="_blank" style="color:#38bdf8; text-decoration:none;">GitHub ↗</a></span>
+        </div>
+        <ul>
+          <li>Developed personal cloud note workspace supporting frictionless Google OAuth 2.0 and JWT token authentication.</li>
+          <li>Added real-time search, tag categorization, markdown preview, copy-to-clipboard, and session invalidation.</li>
+        </ul>
+      </div>
+
+      <!-- 5. Mini-eKart -->
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Mini-eKart — Full-Stack E-Commerce Platform</span>
+            <span class="item-subtitle">[React.js, Node.js, Express.js, MongoDB Atlas, Razorpay, Cloudinary]</span>
+          </div>
+          <span class="item-date">
+            <a href="https://mini-ekart-app-wv57.vercel.app/" target="_blank" style="color:#10b981; text-decoration:none; margin-right:8px; font-weight:600;">Live Demo ↗</a>
+            <a href="https://github.com/Kundan62065/MINI-EKART-APP" target="_blank" style="color:#38bdf8; text-decoration:none;">GitHub ↗</a>
+          </span>
+        </div>
+        <ul>
+          <li>Created online shopping platform featuring dynamic product catalog, category filters, and persistent cart state.</li>
+          <li>Integrated <strong>Razorpay payment gateway</strong> for online transactions and <strong>Nodemailer</strong> for user email verification.</li>
+          <li>Utilized <strong>Multer and Cloudinary</strong> for image cloud storage and built an administrative panel for catalog CRUD operations.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Leadership & Community -->
+    <section class="section">
+      <h2 class="section-title"><span>//</span> Leadership & Community Head</h2>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Technical Leader — Code Forge (NIAMT Ranchi)</span>
+          </div>
+          <span class="item-date">Community of Cybersecurity & Blockchain</span>
+        </div>
+        <p style="font-size:0.85rem; color:#cbd5e1;">Led workshops on smart contract security, secure coding practices, and defensive blockchain architecture for 100+ students.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Cybersecurity Awareness Programs — Campus & Community Outreach</span>
+          </div>
+          <span class="item-date">Speaker & Coordinator</span>
+        </div>
+        <p style="font-size:0.85rem; color:#cbd5e1;">Conducted live awareness drives demonstrating phishing prevention, multi-factor security, and safe Web3 transaction hygiene.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Sports Secretary — SFU Gymkhana (NIAMT Ranchi)</span>
+          </div>
+          <span class="item-date">2025 – 2026</span>
+        </div>
+        <p style="font-size:0.85rem; color:#cbd5e1;">Headed campus athletic operations, budgeting, and tournament logistics. Winner & runner-up in Football and Chess championships.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Cultural Head — Mission Kartavya Foundation (NGO)</span>
+          </div>
+          <span class="item-date">Community Welfare</span>
+        </div>
+        <p style="font-size:0.85rem; color:#cbd5e1;">Spearheaded Kartavya-Tech educational programs introducing computer literacy and digital tools to underprivileged students.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Active Member — IEEE Student Branch (NIAMT Ranchi)</span>
+          </div>
+          <span class="item-date">Technical Seminars & Hackathons</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title"><span>//</span> Certifications</h2>
+      <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1;">
+        <li><strong>Salesforce CRM Developer Certification</strong> — Teqfocus, Ranchi</li>
+        <li><strong>Railway Shift Project Certification</strong> — Hatia Ranchi (Eastern Division, Indian Railways)</li>
+        <li><strong>Cybersecurity & Blockchain Architecture Certification</strong> — NIAMT Ranchi</li>
+        <li><strong>Full Stack Web Development Certification</strong> — Internshala</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
