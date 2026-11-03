@@ -1,12 +1,45 @@
 /**
- * Kundan Saw - Developer Portfolio Interactive Scripts
- * Inspired by Rana Poddar's portfolio (ranapoddar.me)
+ * Kundan Saw - Developer Portfolio
+ * Theme Toggle (Light/Dark), Sticky Header, and Interactive Project Filters
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // --------------------------------------------------------------------------
-  // 1. MOBILE NAVIGATION DRAWER TOGGLE
+  // 1. DAY / NIGHT (LIGHT / DARK) THEME SWITCHER
+  // --------------------------------------------------------------------------
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const sunIcon = document.getElementById('sunIcon');
+  const moonIcon = document.getElementById('moonIcon');
+
+  // Check saved theme or default to light
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+  
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      if (sunIcon) sunIcon.classList.remove('hidden');
+      if (moonIcon) moonIcon.classList.add('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      if (sunIcon) sunIcon.classList.add('hidden');
+      if (moonIcon) moonIcon.classList.remove('hidden');
+    }
+  }
+
+  applyTheme(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      const nextTheme = isDark ? 'light' : 'dark';
+      applyTheme(nextTheme);
+      localStorage.setItem('portfolio-theme', nextTheme);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 2. MOBILE NAVIGATION DRAWER
   // --------------------------------------------------------------------------
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
@@ -16,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.classList.toggle('hidden');
     });
 
-    // Close mobile drawer when clicking any link inside
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.add('hidden');
@@ -25,104 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 2. INTERACTIVE TERMINAL WINDOW (Tabs & Dynamic Simulation)
-  // --------------------------------------------------------------------------
-  const terminalTabs = document.querySelectorAll('.terminal-tab');
-  const terminalScreen = document.getElementById('terminalScreen');
-
-  const terminalData = {
-    whoami: `
-      <div class="space-y-3">
-        <div class="flex items-center gap-2 text-slate-400">
-          <span class="text-emerald-400">kundan@dev-workspace</span>:<span class="text-cyan-400">~</span>$ whoami
-        </div>
-        <div class="text-emerald-300 font-semibold text-sm">
-          Kundan Saw (B.Tech Computer Engineering, NIAMT Ranchi)
-        </div>
-        <p class="text-slate-400 leading-relaxed text-xs">
-          Software architect specializing in Web3 smart contract security, real-time distributed platforms, and enterprise Salesforce CRM automation.
-        </p>
-        <div class="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-white/5">
-          <div><span class="text-slate-500">Degree:</span> B.Tech 2023-2027</div>
-          <div><span class="text-slate-500">CGPA:</span> 8.65 / 10</div>
-          <div><span class="text-slate-500">Institute:</span> NIAMT Ranchi</div>
-          <div><span class="text-slate-500">Location:</span> Ranchi, India</div>
-        </div>
-        <div class="text-xs text-cyan-400/90 pt-1 flex items-center gap-1.5">
-          <span class="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-          Ready for technical engineering opportunities.
-        </div>
-      </div>
-    `,
-    skills: `
-      <div class="space-y-3 font-mono text-xs">
-        <div class="text-slate-400">
-          <span class="text-emerald-400">kundan@dev-workspace</span>:<span class="text-cyan-400">~</span>$ ./list_skills.sh --all
-        </div>
-        <div class="space-y-1.5 text-slate-300">
-          <div><span class="text-emerald-400">▶ Web3 & Security:</span> Solidity 0.8.20, Web3.js, CEI Pattern, Mutex Guards, STRIDE Modeling</div>
-          <div><span class="text-cyan-400">▶ Salesforce:</span> Salesforce DX, Apex Triggers, Handler Pattern, Flows, SOQL, OWD</div>
-          <div><span class="text-indigo-400">▶ Full Stack:</span> React 18, Node.js, Express.js, Socket.IO, MongoDB, Tailwind</div>
-          <div><span class="text-amber-400">▶ Languages:</span> Java, C, C++, JavaScript (ES6+), Python, SQL</div>
-          <div><span class="text-slate-400">▶ DevOps:</span> Git, GitHub Actions, Vercel, Render, Kali Linux, Postman</div>
-        </div>
-        <div class="text-slate-500 text-[11px] pt-1">
-          Total verified skills: 20+ modules across enterprise & decentralization.
-        </div>
-      </div>
-    `,
-    audit: `
-      <div class="space-y-2.5 font-mono text-xs">
-        <div class="text-slate-400">
-          <span class="text-emerald-400">kundan@dev-workspace</span>:<span class="text-cyan-400">~</span>$ npx hardhat test contracts/Crowdfunding.sol
-        </div>
-        <div class="text-slate-300 space-y-1 text-[11px]">
-          <div class="text-emerald-400">✔ SWC-107: Reentrancy attack simulation reverted by nonReentrant mutex (42ms)</div>
-          <div class="text-emerald-400">✔ SWC-105: Direct creator withdraw() blocked; milestone voting required (38ms)</div>
-          <div class="text-emerald-400">✔ SWC-113: Pull payment claimRefund() executes in isolated gas context (19ms)</div>
-          <div class="text-emerald-400">✔ CircuitBreaker: toggleEmergencyPause() halts untrusted state transitions (14ms)</div>
-        </div>
-        <div class="p-2 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[11px]">
-          [AUDIT REPORT] 4 tests passed, 0 security vulnerabilities detected.
-        </div>
-      </div>
-    `,
-    railway: `
-      <div class="space-y-2.5 font-mono text-xs">
-        <div class="text-slate-400">
-          <span class="text-emerald-400">kundan@dev-workspace</span>:<span class="text-cyan-400">~</span>$ node socket_alert_engine.js
-        </div>
-        <div class="text-slate-300 space-y-1 text-[11px]">
-          <div class="text-cyan-400">[SOCKET.IO] Connected to Indian Railways Hatia Division Live Relay</div>
-          <div>[CREW #4029] Shift duration: 07h 59m → Normal state</div>
-          <div class="text-amber-400">[ALERT 8H] Threshold reached: Crew #4029 duty ping emitted</div>
-          <div class="text-amber-400">[ALERT 9H] Fatigue warning generated; relief dispatch alerted</div>
-          <div class="text-red-400">[CRITICAL 14H] Maximum permissible duty ceiling enforced</div>
-        </div>
-        <div class="p-2 rounded bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-[11px]">
-          [SYSTEM STATUS] Millisecond synchronization active for loco running staff.
-        </div>
-      </div>
-    `
-  };
-
-  terminalTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      terminalTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const tabKey = tab.getAttribute('data-tab');
-      if (terminalData[tabKey]) {
-        terminalScreen.innerHTML = terminalData[tabKey];
-      }
-    });
-  });
-
-  // --------------------------------------------------------------------------
   // 3. PROJECT FILTER TABS
   // --------------------------------------------------------------------------
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const projectCards = document.querySelectorAll('.tuddu-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -145,40 +83,84 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --------------------------------------------------------------------------
-  // 4. SECURITY AUDIT MODAL
+  // 4. TERMINAL CLI TABS
   // --------------------------------------------------------------------------
-  const openAuditModalBtn = document.querySelector('.open-audit-modal');
-  const auditModal = document.getElementById('auditModal');
-  const closeAuditModalBtn = document.getElementById('closeAuditModal');
+  const terminalTabs = document.querySelectorAll('.terminal-tab');
+  const terminalScreen = document.getElementById('terminalScreen');
 
-  if (openAuditModalBtn && auditModal && closeAuditModalBtn) {
-    openAuditModalBtn.addEventListener('click', () => {
-      auditModal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    });
+  const terminalData = {
+    whoami: `
+      <div class="space-y-3 font-mono text-xs">
+        <div class="text-slate-400">
+          <span class="text-emerald-400">kundan@dev</span>:<span class="text-cyan-400">~</span>$ whoami
+        </div>
+        <div class="text-emerald-300 font-semibold text-sm">
+          Kundan Saw — Computer Engineering student @ NIAMT Ranchi
+        </div>
+        <p class="text-slate-300 leading-relaxed text-xs">
+          I build full-stack web applications, Salesforce solutions, and real-time platforms like DutyHours.in for Indian Railways.
+        </p>
+        <div class="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-slate-700 text-slate-300">
+          <div><span class="text-slate-500">Degree:</span> B.Tech (2023-2027)</div>
+          <div><span class="text-slate-500">CGPA:</span> 8.65 / 10</div>
+          <div><span class="text-slate-500">College:</span> NIAMT Ranchi</div>
+          <div><span class="text-slate-500">Location:</span> Ranchi, India</div>
+        </div>
+      </div>
+    `,
+    skills: `
+      <div class="space-y-2 font-mono text-xs">
+        <div class="text-slate-400">
+          <span class="text-emerald-400">kundan@dev</span>:<span class="text-cyan-400">~</span>$ cat skills.txt
+        </div>
+        <div class="space-y-1.5 text-slate-300 text-[11px]">
+          <div><strong class="text-cyan-400">Languages:</strong> Java, C, C++, JavaScript (ES6+), Python, Apex, SOQL, Solidity</div>
+          <div><strong class="text-emerald-400">Full Stack:</strong> React.js, Node.js, Express, Socket.IO, MongoDB, Tailwind</div>
+          <div><strong class="text-indigo-400">Salesforce:</strong> Salesforce DX, Triggers, Flows, OWD Security, Dashboards</div>
+          <div><strong class="text-amber-400">Tools:</strong> Git, GitHub, Vercel, Render, Postman, Linux</div>
+        </div>
+      </div>
+    `,
+    audit: `
+      <div class="space-y-2 font-mono text-xs">
+        <div class="text-slate-400">
+          <span class="text-emerald-400">kundan@dev</span>:<span class="text-cyan-400">~</span>$ hardhat test SentinelFund.sol
+        </div>
+        <div class="space-y-1 text-slate-300 text-[11px]">
+          <div class="text-emerald-400">✔ Reentrancy protection (mutex lock verified)</div>
+          <div class="text-emerald-400">✔ Milestone voting quorum (>50% contributors needed)</div>
+          <div class="text-emerald-400">✔ Pull payment refund pattern enabled</div>
+        </div>
+      </div>
+    `,
+    railway: `
+      <div class="space-y-2 font-mono text-xs">
+        <div class="text-slate-400">
+          <span class="text-emerald-400">kundan@dev</span>:<span class="text-cyan-400">~</span>$ node dutyhours_relay.js
+        </div>
+        <div class="space-y-1 text-slate-300 text-[11px]">
+          <div class="text-cyan-400">[DutyHours.in] Connected to Indian Railways (Hatia Division)</div>
+          <div>[Shift Monitor] Duty threshold pings: 8h, 9h, 11h, 14h alerts active.</div>
+          <div class="text-emerald-400">[Socket.IO] Real-time fatigue monitoring operational.</div>
+        </div>
+      </div>
+    `
+  };
 
-    closeAuditModalBtn.addEventListener('click', () => {
-      auditModal.classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    });
+  terminalTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      terminalTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
 
-    auditModal.addEventListener('click', (e) => {
-      if (e.target === auditModal) {
-        auditModal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
+      const tabKey = tab.getAttribute('data-tab');
+      if (terminalData[tabKey]) {
+        terminalScreen.innerHTML = terminalData[tabKey];
       }
     });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !auditModal.classList.contains('hidden')) {
-        auditModal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-    });
-  }
+  });
 
   // --------------------------------------------------------------------------
-  // 5. COPY TO CLIPBOARD & TOAST NOTIFICATION
+  // 5. COPY BUTTONS & TOAST
   // --------------------------------------------------------------------------
   const copyButtons = document.querySelectorAll('.copy-btn');
   const toast = document.getElementById('toast');
@@ -193,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       toast.classList.remove('translate-y-0', 'opacity-100');
       toast.classList.add('translate-y-20', 'opacity-0');
-    }, 2500);
+    }, 2000);
   }
 
   copyButtons.forEach(btn => {
@@ -201,66 +183,30 @@ document.addEventListener('DOMContentLoaded', () => {
       const textToCopy = btn.getAttribute('data-copy');
       if (textToCopy) {
         navigator.clipboard.writeText(textToCopy).then(() => {
-          showToast(`Copied ${textToCopy} to clipboard!`);
+          showToast(`Copied ${textToCopy}`);
           btn.textContent = 'Copied!';
-          setTimeout(() => {
-            btn.textContent = 'Copy';
-          }, 2000);
-        }).catch(err => {
-          console.error('Clipboard copy failed:', err);
+          setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
         });
       }
     });
   });
 
   // --------------------------------------------------------------------------
-  // 6. CONTACT FORM HANDLING WITH MAILTO DISPATCH
+  // 6. CONTACT FORM MAILTO
   // --------------------------------------------------------------------------
   const contactForm = document.getElementById('contactForm');
-  const formFeedback = document.getElementById('formFeedback');
-
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-
       const name = document.getElementById('senderName').value.trim();
       const email = document.getElementById('senderEmail').value.trim();
       const subject = document.getElementById('subject').value.trim() || 'Portfolio Inquiry';
       const message = document.getElementById('message').value.trim();
 
-      if (!name || !email || !message) {
-        if (formFeedback) {
-          formFeedback.textContent = 'Please fill out all required fields.';
-          formFeedback.className = 'text-amber-400 bg-amber-500/10 border border-amber-500/20 text-xs font-mono py-2 rounded-lg';
-          formFeedback.classList.remove('hidden');
-        }
-        return;
-      }
-
-      // Generate direct mailto link to Kundan's email
-      const mailtoUrl = `mailto:kundansawvks786@gmail.com?subject=${encodeURIComponent(subject + ' - from ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\nMessage:\n' + message)}`;
-
-      // Open email client
+      const mailtoUrl = `mailto:kundansawvks786@gmail.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
       window.location.href = mailtoUrl;
-
-      if (formFeedback) {
-        formFeedback.textContent = 'Opening your email client to send dispatch... (or reach kundansawvks786@gmail.com directly)';
-        formFeedback.className = 'text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono py-2 rounded-lg';
-        formFeedback.classList.remove('hidden');
-      }
-
-      showToast('Opening email dispatch...');
+      showToast('Opening your mail client...');
     });
   }
-
-  // Header scroll shadow toggle
-  const mainHeader = document.getElementById('mainHeader');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      mainHeader.classList.add('shadow-lg', 'bg-[#080b11]/95');
-    } else {
-      mainHeader.classList.remove('shadow-lg', 'bg-[#080b11]/95');
-    }
-  });
 
 });

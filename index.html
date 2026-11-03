@@ -3,204 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kundan Saw | Cybersecurity & Web3 Developer • Full-Stack • Salesforce</title>
+  <title>Kundan Saw | Full-Stack & Salesforce Developer</title>
   
-  <!-- SEO & LinkedIn OpenGraph Metadata -->
-  <meta name="description" content="Portfolio of Kundan Saw: Computer Engineering at NIAMT Ranchi, specializing in Web3 Smart Contract Security (SentinelFund), Real-Time Systems (DutyHours.in Railway Shift Management), Salesforce CRM, and MERN Full Stack.">
-  <meta name="keywords" content="Kundan Saw, Cybersecurity, Web3 Developer, Solidity, Smart Contract Audit, Salesforce Developer, Apex, MERN Stack, DutyHours.in, Railway Shift Management, NIAMT Ranchi">
+  <!-- SEO & OpenGraph -->
+  <meta name="description" content="Portfolio of Kundan Saw: Computer Engineering at NIAMT Ranchi, building scalable web apps, Salesforce systems, and real-time platforms like DutyHours.in.">
   <meta name="author" content="Kundan Saw">
   
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kundan62065.github.io/">
   <link rel="canonical" href="https://kundan62065.github.io/">
-  <meta property="og:title" content="Kundan Saw | Cybersecurity & Web3 Developer • Full-Stack • Salesforce">
-  <meta property="og:description" content="Explore flagship projects: SentinelFund (Defensive Web3 Crowdfunding), DutyHours.in (Indian Railways Shift Management), and Salesforce Hospital Operations CRM.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Kundan62065/Kundan62065/main/preview-banner.png">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kundan Saw | Portfolio">
-  <meta name="twitter:description" content="Full-Stack Developer, Cybersecurity Enthusiast, and Salesforce Platform Builder.">
+  <meta property="og:title" content="Kundan Saw | Portfolio">
+  <meta property="og:description" content="Projects include DutyHours.in (Railway Shift Management), SentinelFund Web3 DApp, and Salesforce Hospital CRM.">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500/20 selection:text-emerald-900">
+<body>
 
-  <!-- Soft Ambient Glow Background Accents -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-emerald-200/40 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/3 -right-40 w-[30rem] h-[30rem] bg-indigo-200/35 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-cyan-200/40 rounded-full blur-3xl"></div>
-  </div>
-
-  <!-- Global Header Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/85 border-b border-slate-200/80 transition-all duration-300 shadow-sm" id="mainHeader">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- STICKY HEADER (Always visible when scrolling down) -->
+  <header id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
-      <!-- Logo -->
-      <a href="#hero" class="group flex items-center gap-3">
-        <span class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center font-mono font-bold text-emerald-600 group-hover:border-emerald-500 group-hover:scale-105 transition-all shadow-sm">
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-2.5">
+        <span class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-600 text-sm">
           &lt;/&gt;
         </span>
         <div class="flex flex-col">
-          <span class="font-bold text-lg tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">
+          <span class="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">
             Kundan Saw
           </span>
-          <span class="font-mono text-[10px] text-emerald-600 font-semibold tracking-wider uppercase">
-            Cybersecurity & Web3
+          <span class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold uppercase tracking-wider">
+            Developer Portfolio
           </span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-slate-300">
         <a href="#about" class="hover:text-emerald-600 transition-colors">About</a>
         <a href="#projects" class="hover:text-emerald-600 transition-colors">Projects</a>
-        <a href="#skills" class="hover:text-emerald-600 transition-colors">Toolbox</a>
+        <a href="#skills" class="hover:text-emerald-600 transition-colors">Skills</a>
         <a href="#leadership" class="hover:text-emerald-600 transition-colors">Leadership</a>
-        <a href="#experience" class="hover:text-emerald-600 transition-colors">Certifications</a>
         <a href="#contact" class="hover:text-emerald-600 transition-colors">Contact</a>
       </nav>
 
-      <!-- Header Actions -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="resume.html" class="px-4 py-2 text-xs font-mono font-bold rounded-lg border border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-400 text-slate-700 flex items-center gap-2 transition-all shadow-sm">
-          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+      <!-- Right Header Actions (Day/Night Toggle + Resume + Connect) -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Day / Night Toggle Button -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Day and Night theme" title="Toggle Light / Dark mode">
+          <!-- Sun Icon (Shown in Dark Mode to switch to light) -->
+          <svg id="sunIcon" class="w-5 h-5 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
           </svg>
+          <!-- Moon Icon (Shown in Light Mode to switch to dark) -->
+          <svg id="moonIcon" class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+
+        <a href="resume.html" class="hidden sm:inline-flex px-3.5 py-1.5 text-xs font-mono font-bold rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-emerald-500 transition-all">
           /resume
         </a>
-        <a href="#contact" class="px-4 py-2 text-xs font-bold rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono tracking-wide shadow-md shadow-emerald-600/20 transition-all hover:scale-105">
-          Let's Connect
-        </a>
-      </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:text-black" aria-label="Toggle Navigation">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+        <a href="#contact" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono transition-all">
+          Connect
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
 
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden md:hidden px-4 pt-2 pb-6 bg-white border-b border-slate-200 space-y-3 shadow-lg">
-      <a href="#about" class="block py-2 text-sm font-semibold text-slate-700 hover:text-emerald-600">About</a>
-      <a href="#projects" class="block py-2 text-sm font-semibold text-slate-700 hover:text-emerald-600">Projects</a>
-      <a href="#skills" class="block py-2 text-sm font-semibold text-slate-700 hover:text-emerald-600">Toolbox</a>
-      <a href="#leadership" class="block py-2 text-sm font-semibold text-slate-700 hover:text-emerald-600">Leadership & Awareness</a>
-      <a href="#experience" class="block py-2 text-sm font-semibold text-slate-700 hover:text-emerald-600">Certifications</a>
-      <a href="#contact" class="block py-2 text-sm font-semibold text-slate-700 hover:text-emerald-600">Contact</a>
-      <div class="pt-4 flex flex-col gap-2">
-        <a href="resume.html" class="w-full text-center py-2 text-xs font-mono font-bold rounded-lg border border-slate-300 bg-slate-50 text-emerald-700">
-          View /resume
-        </a>
-        <a href="#contact" class="w-full text-center py-2 text-xs font-bold rounded-lg bg-emerald-600 text-white">
-          Let's Connect
-        </a>
-      </div>
+    <div id="mobileDrawer" class="hidden md:hidden px-4 pt-2 pb-4 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 space-y-2 text-sm font-semibold">
+      <a href="#about" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">About</a>
+      <a href="#projects" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Projects</a>
+      <a href="#skills" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Skills</a>
+      <a href="#leadership" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Leadership</a>
+      <a href="#contact" class="block py-1.5 text-slate-700 dark:text-slate-300 hover:text-emerald-600">Contact</a>
+      <a href="resume.html" class="block py-1.5 text-emerald-600 font-mono">View /resume.html</a>
     </div>
   </header>
 
-  <main class="relative z-10 pt-28">
+  <main>
 
     <!-- HERO SECTION -->
-    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Left Content -->
-        <div class="lg:col-span-7 space-y-6">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-5">
           
-          <!-- Availability Badge -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-mono font-semibold tracking-wide shadow-sm">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
-            </span>
-            Available for Software & Security Roles
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
+            Available for Software Engineering Roles
           </div>
 
-          <!-- Hero Headline -->
-          <div class="space-y-2">
-            <p class="font-mono text-sm sm:text-base text-slate-500 font-medium">
-              Hello World! I'm <span class="text-slate-900 font-bold">Kundan Saw</span>
-            </p>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-              Architecting <span class="gradient-text">Defensive Web3</span> & Scalable Systems.
+          <div class="space-y-1">
+            <p class="font-mono text-sm text-slate-500 dark:text-slate-400">Hello World! I'm</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              Kundan Saw
             </h1>
+            <p class="text-xl sm:text-2xl font-bold gradient-text pt-1">
+              Full-Stack, Real-Time & Salesforce Developer
+            </p>
           </div>
 
-          <!-- Bio Pitch -->
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
-            Computer Engineering undergraduate at <strong class="text-slate-900">NIAMT Ranchi</strong> (CGPA: <strong>8.65</strong>). I engineer secure blockchain smart contracts, real-time enterprise platforms, and cloud solutions using <strong class="text-emerald-700 font-semibold">Solidity</strong>, <strong class="text-cyan-700 font-semibold">MERN Stack</strong>, and <strong class="text-indigo-700 font-semibold">Salesforce DX</strong>.
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+            Computer Engineering student at <strong>NIAMT Ranchi</strong> (CGPA <strong>8.65</strong>). I build full-stack web platforms, Salesforce CRM systems, and real-time operations software like <strong>DutyHours.in</strong> for Indian Railways.
           </p>
 
-          <!-- Primary CTA Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#projects" class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm tracking-wide shadow-md shadow-emerald-600/25 hover:scale-[1.02] transition-all flex items-center gap-2">
-              <span>&lt;/&gt; Explore Projects</span>
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#projects" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm tracking-wide shadow-sm transition-all flex items-center gap-1.5">
+              <span>View Projects</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
 
-            <a href="resume.html" class="px-6 py-3.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-400 text-slate-800 font-mono text-sm font-semibold tracking-wide shadow-sm transition-all flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-              View Resume (/resume)
+            <a href="resume.html" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:border-emerald-500 font-mono text-xs sm:text-sm font-semibold transition-all">
+              Resume (/resume)
             </a>
 
-            <a href="https://github.com/Kundan62065" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl border border-slate-300 bg-white hover:border-slate-500 text-slate-700 hover:text-black shadow-sm transition-all" aria-label="GitHub Profile">
+            <a href="https://github.com/Kundan62065" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-all" aria-label="GitHub">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
 
-            <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl border border-slate-300 bg-white hover:border-slate-500 text-slate-700 hover:text-black shadow-sm transition-all" aria-label="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-black dark:hover:text-white transition-all" aria-label="LinkedIn">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
 
-            <a href="https://leetcode.com/u/Kundan_kumar-saw0/" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl border border-slate-300 bg-white hover:border-amber-500 text-slate-700 hover:text-amber-600 shadow-sm transition-all" aria-label="LeetCode Profile">
+            <a href="https://leetcode.com/u/Kundan_kumar-saw0/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-amber-500 transition-all" aria-label="LeetCode">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .666-1.795l3.774-4.04 4.346-4.652c.546-.546.546-1.43 0-1.976A1.378 1.378 0 0 0 13.483 0zm-2.88 5.9a1.376 1.376 0 0 0-1.023.55L4.472 11.9a1.38 1.38 0 1 0 2.062 1.834l5.108-5.45a1.378 1.378 0 0 0-1.039-2.384z"/></svg>
             </a>
           </div>
 
-          <!-- Quick Metric Stats -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200">
-            <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <div class="text-2xl font-bold font-mono text-emerald-600">8.65</div>
-              <div class="text-xs text-slate-500 font-medium mt-0.5">NIAMT CGPA</div>
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-3 gap-3 pt-3 border-t border-slate-200 dark:border-slate-800">
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="text-xl font-bold font-mono text-emerald-600 dark:text-emerald-400">8.65</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">NIAMT CGPA</div>
             </div>
-            <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <div class="text-2xl font-bold font-mono text-cyan-600">5</div>
-              <div class="text-xs text-slate-500 font-medium mt-0.5">Flagship Projects</div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="text-xl font-bold font-mono text-cyan-600 dark:text-cyan-400">5</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Projects Built</div>
             </div>
-            <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <div class="text-2xl font-bold font-mono text-indigo-600">100%</div>
-              <div class="text-xs text-slate-500 font-medium mt-0.5">Reentrancy Shielded</div>
-            </div>
-            <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <div class="text-2xl font-bold font-mono text-emerald-600">3+</div>
-              <div class="text-xs text-slate-500 font-medium mt-0.5">Leadership Roles</div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="text-xl font-bold font-mono text-indigo-600 dark:text-indigo-400">3+</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Leadership Roles</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Terminal Window (Clean Dark-Slate Dev Terminal) -->
+        <!-- Right Terminal Window (Interactive) -->
         <div class="lg:col-span-5">
           <div class="terminal-card">
             
             <!-- Terminal Header -->
-            <div class="bg-[#1e293b] px-4 py-3 border-b border-slate-700 flex items-center justify-between">
+            <div class="bg-[#1e293b] px-4 py-2.5 border-b border-slate-700 flex items-center justify-between">
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
                 <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
                 <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-                <span class="ml-2 font-mono text-xs text-slate-300 font-medium">kundan@dev-workspace:~</span>
+                <span class="ml-2 font-mono text-xs text-slate-300">kundan@dev-workspace:~</span>
               </div>
               <span class="font-mono text-[10px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">
                 ACTIVE
@@ -209,49 +189,42 @@
 
             <!-- Terminal Tabs -->
             <div class="flex border-b border-slate-700 bg-[#0f172a] text-xs font-mono">
-              <button class="terminal-tab active px-4 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="whoami">
+              <button class="terminal-tab active px-3.5 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="whoami">
                 <span class="text-emerald-400">$</span> whoami
               </button>
-              <button class="terminal-tab px-4 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="skills">
-                <span class="text-cyan-400">$</span> skills.sh
+              <button class="terminal-tab px-3.5 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="skills">
+                <span class="text-cyan-400">$</span> skills
               </button>
-              <button class="terminal-tab px-4 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="audit">
-                <span class="text-indigo-400">$</span> audit.sol
+              <button class="terminal-tab px-3.5 py-2 border-r border-slate-700 flex items-center gap-1.5" data-tab="railway">
+                <span class="text-amber-400">$</span> dutyhours
               </button>
-              <button class="terminal-tab px-4 py-2 flex items-center gap-1.5" data-tab="railway">
-                <span class="text-amber-400">$</span> dutyhours.io
+              <button class="terminal-tab px-3.5 py-2 flex items-center gap-1.5" data-tab="audit">
+                <span class="text-indigo-400">$</span> web3
               </button>
             </div>
 
-            <!-- Terminal Screen Content -->
-            <div class="p-5 font-mono text-xs sm:text-sm text-slate-200 min-h-[290px] overflow-y-auto" id="terminalScreen">
-              <div class="space-y-3">
-                <div class="flex items-center gap-2 text-slate-400">
-                  <span class="text-emerald-400">kundan@dev-workspace</span>:<span class="text-cyan-400">~</span>$ whoami
+            <!-- Terminal Screen -->
+            <div class="p-4 font-mono text-xs text-slate-200 min-h-[220px]" id="terminalScreen">
+              <div class="space-y-2">
+                <div class="text-slate-400">
+                  <span class="text-emerald-400">kundan@dev</span>:<span class="text-cyan-400">~</span>$ whoami
                 </div>
                 <div class="text-emerald-300 font-semibold">
                   Kundan Saw (B.Tech Computer Engineering, NIAMT Ranchi)
                 </div>
-                <p class="text-slate-400 leading-relaxed text-xs">
-                  Software architect specializing in Web3 smart contract security, real-time distributed platforms (DutyHours.in), and enterprise Salesforce CRM automation.
+                <p class="text-slate-300 leading-relaxed text-xs">
+                  I develop real-world software across MERN stack, Indian Railways shift management (DutyHours.in), Salesforce DX, and Solidity.
                 </p>
-                <div class="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-slate-800">
-                  <div><span class="text-slate-500">Degree:</span> B.Tech 2023-2027</div>
-                  <div><span class="text-slate-500">CGPA:</span> 8.65 / 10</div>
-                  <div><span class="text-slate-500">Institute:</span> NIAMT Ranchi</div>
-                  <div><span class="text-slate-500">Location:</span> Ranchi, India</div>
-                </div>
-                <div class="text-xs text-cyan-400 pt-1 flex items-center gap-1.5">
-                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-                  Ready to deploy high-integrity software.
+                <div class="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-slate-800 text-slate-400">
+                  <div>Degree: B.Tech (2023-2027)</div>
+                  <div>CGPA: 8.65 / 10</div>
                 </div>
               </div>
             </div>
 
-            <!-- Terminal Footer -->
-            <div class="bg-[#1e293b] px-4 py-2 border-t border-slate-700 flex items-center justify-between text-[11px] font-mono text-slate-400">
-              <span>Click tabs above to inspect telemetry</span>
-              <span class="text-emerald-400 font-semibold">UTF-8 // zsh</span>
+            <div class="bg-[#1e293b] px-4 py-1.5 border-t border-slate-700 flex items-center justify-between text-[10px] font-mono text-slate-400">
+              <span>Click tabs above to inspect</span>
+              <span class="text-emerald-400">zsh</span>
             </div>
 
           </div>
@@ -260,132 +233,113 @@
       </div>
     </section>
 
-    <!-- SKILL MARQUEE TICKER (Light Ribbon) -->
-    <section class="py-5 border-y border-slate-200 bg-white overflow-hidden shadow-sm">
-      <div class="flex whitespace-nowrap animate-marquee gap-8 text-xs font-mono font-medium text-slate-600">
-        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> Solidity 0.8.20</span>
-        <span class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✦</span> Web3.js & DApps</span>
-        <span class="flex items-center gap-2"><span class="text-indigo-600 font-bold">✦</span> Smart Contract Auditing</span>
-        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> Reentrancy (SWC-107) Shield</span>
-        <span class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✦</span> DutyHours.in Real-Time Relay</span>
-        <span class="flex items-center gap-2"><span class="text-indigo-600 font-bold">✦</span> Salesforce DX & SFDX</span>
-        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> Apex Triggers & Handlers</span>
-        <span class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✦</span> Flows & SOQL Architecture</span>
-        <span class="flex items-center gap-2"><span class="text-indigo-600 font-bold">✦</span> MERN Stack (React, Node, Express, Mongo)</span>
-        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> Socket.IO Push Alert Engine</span>
-        <span class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✦</span> Java, C, C++ Foundations</span>
-        <span class="flex items-center gap-2"><span class="text-indigo-600 font-bold">✦</span> Razorpay & Cloudinary Integration</span>
-        <span class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✦</span> STRIDE Threat Modeling</span>
+    <!-- TECH TICKER MARQUEE -->
+    <section class="py-4 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm">
+      <div class="flex whitespace-nowrap animate-marquee gap-8 text-xs font-mono font-medium text-slate-600 dark:text-slate-300">
+        <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✦</span> DutyHours.in (Socket.IO)</span>
+        <span class="flex items-center gap-1.5"><span class="text-cyan-600 font-bold">✦</span> React.js & Node.js</span>
+        <span class="flex items-center gap-1.5"><span class="text-indigo-600 font-bold">✦</span> Salesforce DX & Apex</span>
+        <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✦</span> Solidity 0.8.20</span>
+        <span class="flex items-center gap-1.5"><span class="text-cyan-600 font-bold">✦</span> MongoDB & Express</span>
+        <span class="flex items-center gap-1.5"><span class="text-indigo-600 font-bold">✦</span> Java & C++</span>
+        <span class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✦</span> Flows & SOQL</span>
+        <span class="flex items-center gap-1.5"><span class="text-cyan-600 font-bold">✦</span> JWT & Razorpay</span>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS SHOWCASE (TUDDU STRUCTURE LIKE RANA'S PORTFOLIO) -->
-    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <!-- FEATURED PROJECTS SHOWCASE (TUDDU CARDS) -->
+    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       
       <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-        <div class="space-y-2">
-          <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-            <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-            Featured Engineering Work
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Flagship Projects & Architectures
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+            Portfolio Work
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
+            Featured Projects
           </h2>
-          <p class="text-slate-600 text-sm max-w-xl">
-            Each project is presented in an interactive preview card ("tuddu") with live deployment links, source code, and architecture metrics.
-          </p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="flex flex-wrap items-center gap-2 font-mono text-xs" id="projectFilter">
           <button class="filter-btn active" data-filter="all">All (5)</button>
           <button class="filter-btn" data-filter="realtime">Real-Time</button>
-          <button class="filter-btn" data-filter="web3">Web3 & Cyber</button>
+          <button class="filter-btn" data-filter="web3">Web3</button>
           <button class="filter-btn" data-filter="salesforce">Salesforce</button>
-          <button class="filter-btn" data-filter="mern">MERN Full-Stack</button>
+          <button class="filter-btn" data-filter="mern">MERN</button>
         </div>
       </div>
 
       <!-- Projects Grid (Tuddu Style) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- 1. TUDDU: INDIAN RAILWAYS DUTYHOURS.IN -->
+        <!-- 1. TUDDU: DUTYHOURS.IN (RAILWAYS SHIFT MANAGEMENT) -->
         <div class="tuddu-card group" data-category="realtime">
           
-          <!-- Picture Box with Toast Badge -->
           <div class="tuddu-pic-box">
-            <!-- Toast Category Badge -->
-            <span class="toast-badge bg-cyan-600 text-white">
+            <span class="toast-badge bg-cyan-600">
               🚆 Workforce Management
             </span>
 
-            <!-- Graphical SVG Preview for DutyHours.in -->
             <svg class="tuddu-preview-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="400" height="220" fill="#082f49"/>
-              <!-- Top bar -->
-              <rect x="0" y="0" width="400" height="28" fill="#0c4a6e"/>
-              <circle cx="16" cy="14" r="4" fill="#f43f5e"/>
-              <circle cx="28" cy="14" r="4" fill="#fbbf24"/>
-              <circle cx="40" cy="14" r="4" fill="#10b981"/>
-              <text x="60" y="18" fill="#7dd3fc" font-family="monospace" font-size="10" font-weight="bold">dutyhours.in/login — Indian Railways Shift Ops</text>
+              <rect x="0" y="0" width="400" height="26" fill="#0c4a6e"/>
+              <circle cx="16" cy="13" r="3.5" fill="#f43f5e"/>
+              <circle cx="27" cy="13" r="3.5" fill="#fbbf24"/>
+              <circle cx="38" cy="13" r="3.5" fill="#10b981"/>
+              <text x="55" y="17" fill="#7dd3fc" font-family="monospace" font-size="10" font-weight="bold">dutyhours.in/login — Indian Railways Shift Ops</text>
               
-              <!-- Dashboard Panels -->
-              <rect x="20" y="45" width="170" height="75" rx="8" fill="#075985" opacity="0.6"/>
-              <text x="32" y="65" fill="#bae6fd" font-family="sans-serif" font-size="10" font-weight="bold">Active Shift Fleet</text>
-              <text x="32" y="90" fill="#ffffff" font-family="monospace" font-size="20" font-weight="bold">142 Loco Pilots</text>
-              <text x="32" y="108" fill="#34d399" font-family="monospace" font-size="9">● Hatia Div Sync Live</text>
+              <rect x="25" y="45" width="165" height="70" rx="6" fill="#075985" opacity="0.6"/>
+              <text x="35" y="65" fill="#bae6fd" font-family="sans-serif" font-size="10" font-weight="bold">Active Shift Running Staff</text>
+              <text x="35" y="90" fill="#ffffff" font-family="monospace" font-size="18" font-weight="bold">142 Loco Pilots</text>
+              <text x="35" y="105" fill="#34d399" font-family="monospace" font-size="9">● Live Hatia Division</text>
 
-              <rect x="210" y="45" width="170" height="75" rx="8" fill="#075985" opacity="0.6"/>
-              <text x="222" y="65" fill="#fde047" font-family="sans-serif" font-size="10" font-weight="bold">Fatigue Threshold Alert</text>
-              <rect x="222" y="76" width="145" height="18" rx="4" fill="#e11d48"/>
-              <text x="228" y="89" fill="#ffffff" font-family="monospace" font-size="9" font-weight="bold">⚠ 11h Threshold Warning</text>
-              <text x="222" y="108" fill="#94a3b8" font-family="monospace" font-size="8">Socket.IO Push Active</text>
+              <rect x="205" y="45" width="170" height="70" rx="6" fill="#075985" opacity="0.6"/>
+              <text x="215" y="65" fill="#fde047" font-family="sans-serif" font-size="10" font-weight="bold">Duty Fatigue Alert</text>
+              <rect x="215" y="75" width="150" height="20" rx="4" fill="#e11d48"/>
+              <text x="222" y="89" fill="#ffffff" font-family="monospace" font-size="9" font-weight="bold">Alerts at: 8h, 9h, 11h, 14h</text>
+              <text x="215" y="105" fill="#94a3b8" font-family="monospace" font-size="8">Socket.IO Push Active</text>
 
-              <!-- Duty Shift Timeline -->
-              <rect x="20" y="135" width="360" height="65" rx="8" fill="#0f172a" opacity="0.8"/>
-              <text x="32" y="153" fill="#e2e8f0" font-family="monospace" font-size="9">Duty Milestones: [8h Alert] → [9h Relief] → [11h Critical] → [14h Limit]</text>
-              <line x1="32" y1="170" x2="368" y2="170" stroke="#0284c7" stroke-width="3"/>
-              <circle cx="90" cy="170" r="5" fill="#38bdf8"/>
-              <circle cx="160" cy="170" r="5" fill="#fbbf24"/>
-              <circle cx="250" cy="170" r="5" fill="#f97316"/>
-              <circle cx="340" cy="170" r="5" fill="#ef4444"/>
+              <rect x="25" y="130" width="350" height="65" rx="6" fill="#0f172a" opacity="0.8"/>
+              <text x="35" y="150" fill="#e2e8f0" font-family="monospace" font-size="9">Shift Lifecycle &amp; Crew Relief Planning Table</text>
+              <line x1="35" y1="168" x2="365" y2="168" stroke="#0284c7" stroke-width="2.5"/>
+              <circle cx="90" cy="168" r="4" fill="#38bdf8"/>
+              <circle cx="160" cy="168" r="4" fill="#fbbf24"/>
+              <circle cx="250" cy="168" r="4" fill="#f97316"/>
+              <circle cx="330" cy="168" r="4" fill="#ef4444"/>
             </svg>
           </div>
 
-          <!-- Card Content -->
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-cyan-700 transition-colors">
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 transition-colors">
                 DutyHours.in (Railway Shift Management)
               </h3>
-              <p class="text-xs text-emerald-700 font-mono font-semibold">
-                ✦ Co-engineered with Rana Poddar for Indian Railways (Hatia Division)
+              <p class="text-xs text-emerald-700 dark:text-emerald-400 font-mono font-medium">
+                Collaborative project with Rana Poddar for Indian Railways (Hatia Division)
               </p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Full-stack real-time crew shift tracking engine for locomotive pilots. Features automated fatigue alerts at 8, 9, 11, and 14 hours via Socket.IO push events and multi-tier RBAC.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Real-time shift tracking & crew fatigue alert platform for locomotive pilots. Features automatic alerts at 8, 9, 11, and 14 hours using Socket.IO, role-based access, and Excel duty logs.
               </p>
 
-              <!-- Tech Tags -->
-              <div class="flex flex-wrap gap-1.5 pt-2">
-                <span class="skill-tag">MERN Stack</span>
+              <div class="flex flex-wrap gap-1 pt-1">
+                <span class="skill-tag">MERN</span>
                 <span class="skill-tag">Socket.IO</span>
                 <span class="skill-tag">JWT</span>
                 <span class="skill-tag">ExcelJS</span>
-                <span class="skill-tag">Tailwind</span>
               </div>
             </div>
 
-            <!-- Action Links -->
-            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
-              <a href="https://www.dutyhours.in/login" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
-                <span>View Project ↗</span>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://www.dutyhours.in/login" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+                <span>dutyhours.in ↗</span>
               </a>
-              <div class="flex items-center gap-2">
-                <a href="https://liver-frontend-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 font-mono text-[11px] transition-all">
+              <div class="flex items-center gap-1.5">
+                <a href="https://liver-frontend-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
                   Demo
                 </a>
-                <a href="https://github.com/Kundan62065/R_frontend" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 font-mono text-[11px] transition-all">
+                <a href="https://github.com/Kundan62065/R_frontend" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
                   GitHub
                 </a>
               </div>
@@ -394,77 +348,65 @@
           </div>
         </div>
 
-        <!-- 2. TUDDU: SENTINELFUND (CYBERSECURITY & WEB3 DAPP) -->
+        <!-- 2. TUDDU: SENTINELFUND (WEB3 DAPP) -->
         <div class="tuddu-card group" data-category="web3">
           
-          <!-- Picture Box with Toast Badge -->
           <div class="tuddu-pic-box">
-            <!-- Toast Category Badge -->
-            <span class="toast-badge bg-emerald-600 text-white">
-              🛡️ Web3 & Cybersecurity
+            <span class="toast-badge bg-emerald-600">
+              🛡️ Web3 &amp; Security
             </span>
 
-            <!-- Graphical SVG Preview for SentinelFund -->
             <svg class="tuddu-preview-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="400" height="220" fill="#022c22"/>
-              <!-- Top bar -->
-              <rect x="0" y="0" width="400" height="28" fill="#064e3b"/>
-              <circle cx="16" cy="14" r="4" fill="#f43f5e"/>
-              <circle cx="28" cy="14" r="4" fill="#fbbf24"/>
-              <circle cx="40" cy="14" r="4" fill="#10b981"/>
-              <text x="60" y="18" fill="#6ee7b7" font-family="monospace" font-size="10" font-weight="bold">SentinelFund.sol — Defensive Web3 Protocol</text>
+              <rect x="0" y="0" width="400" height="26" fill="#064e3b"/>
+              <circle cx="16" cy="13" r="3.5" fill="#f43f5e"/>
+              <circle cx="27" cy="13" r="3.5" fill="#fbbf24"/>
+              <circle cx="38" cy="13" r="3.5" fill="#10b981"/>
+              <text x="55" y="17" fill="#6ee7b7" font-family="monospace" font-size="10" font-weight="bold">SentinelFund.sol — Crowdfunding DApp</text>
 
-              <!-- Central Security Badge -->
-              <rect x="25" y="45" width="350" height="60" rx="8" fill="#047857" opacity="0.4"/>
-              <text x="40" y="68" fill="#a7f3d0" font-family="sans-serif" font-size="11" font-weight="bold">Smart Contract Threat Matrix</text>
-              <text x="40" y="90" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold">SWC-107 Reentrancy Mutex: LOCKED</text>
+              <rect x="25" y="45" width="350" height="55" rx="6" fill="#047857" opacity="0.4"/>
+              <text x="35" y="65" fill="#a7f3d0" font-family="sans-serif" font-size="10" font-weight="bold">Smart Contract Protections</text>
+              <text x="35" y="85" fill="#ffffff" font-family="monospace" font-size="13" font-weight="bold">SWC-107 Reentrancy Shield + Mutex</text>
 
-              <!-- Mitigations Row -->
-              <rect x="25" y="115" width="168" height="85" rx="8" fill="#064e3b" opacity="0.7"/>
-              <text x="35" y="135" fill="#34d399" font-family="monospace" font-size="9" font-weight="bold">SWC-105 Anti-Rugpull</text>
-              <text x="35" y="152" fill="#e2e8f0" font-family="sans-serif" font-size="9">Milestone Quorum Voting</text>
-              <text x="35" y="168" fill="#6ee7b7" font-family="monospace" font-size="9">&gt;50% Contributor Consensus</text>
-              <text x="35" y="185" fill="#a7f3d0" font-family="monospace" font-size="8">✔ Centralization Eliminated</text>
+              <rect x="25" y="110" width="168" height="85" rx="6" fill="#064e3b" opacity="0.7"/>
+              <text x="35" y="130" fill="#34d399" font-family="monospace" font-size="9" font-weight="bold">Milestone Governance</text>
+              <text x="35" y="148" fill="#e2e8f0" font-family="sans-serif" font-size="9">&gt;50% backer vote required</text>
+              <text x="35" y="165" fill="#6ee7b7" font-family="monospace" font-size="9">No direct withdrawals</text>
+              <text x="35" y="180" fill="#a7f3d0" font-family="monospace" font-size="8">✔ Anti-Rugpull</text>
 
-              <rect x="207" y="115" width="168" height="85" rx="8" fill="#064e3b" opacity="0.7"/>
-              <text x="217" y="135" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold">SWC-113 DoS Pull Pay</text>
-              <text x="217" y="152" fill="#e2e8f0" font-family="sans-serif" font-size="9">Individual claimRefund()</text>
-              <text x="217" y="168" fill="#7dd3fc" font-family="monospace" font-size="9">0 Gas Revert Loops</text>
-              <text x="217" y="185" fill="#bae6fd" font-family="monospace" font-size="8">✔ Circuit Breaker Active</text>
+              <rect x="207" y="110" width="168" height="85" rx="6" fill="#064e3b" opacity="0.7"/>
+              <text x="217" y="130" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold">Pull Payments</text>
+              <text x="217" y="148" fill="#e2e8f0" font-family="sans-serif" font-size="9">claimRefund() function</text>
+              <text x="217" y="165" fill="#7dd3fc" font-family="monospace" font-size="9">No gas revert loops</text>
+              <text x="217" y="180" fill="#bae6fd" font-family="monospace" font-size="8">✔ DoS-proof</text>
             </svg>
           </div>
 
-          <!-- Card Content -->
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
-                SentinelFund: Defensive Web3 DApp
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
+                SentinelFund (Crowdfunding DApp)
               </h3>
-              <p class="text-xs text-emerald-700 font-mono font-semibold">
-                ✦ Solidity 0.8.20 • Checks-Effects-Interactions (CEI) & STRIDE
+              <p class="text-xs text-emerald-700 dark:text-emerald-400 font-mono font-medium">
+                Solidity 0.8.20 &amp; React 18
               </p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Enterprise defensive crowdfunding protocol built for smart contract security. Defends against SWC-107 reentrancy, SWC-105 rug-pulls via milestone voting quorum, and SWC-113 DoS pull payments.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Decentralized crowdfunding application with built-in reentrancy protection, milestone-based voting before fund withdrawal, and safe pull payments for refunds.
               </p>
 
-              <!-- Tech Tags -->
-              <div class="flex flex-wrap gap-1.5 pt-2">
-                <span class="skill-tag">Solidity 0.8.20</span>
+              <div class="flex flex-wrap gap-1 pt-1">
+                <span class="skill-tag">Solidity</span>
                 <span class="skill-tag">Web3.js</span>
-                <span class="skill-tag">React 18</span>
-                <span class="skill-tag">STRIDE</span>
-                <span class="skill-tag">CEI Pattern</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">CEI Guard</span>
               </div>
             </div>
 
-            <!-- Action Links -->
-            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
-              <button class="open-audit-modal px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all cursor-pointer">
-                <span>Threat Matrix ↗</span>
-              </button>
-              <a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 font-mono text-[11px] transition-all">
-                GitHub Repo
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+                <span>GitHub Repo ↗</span>
               </a>
+              <span class="text-slate-400 font-mono text-[11px]">Audit Tested</span>
             </div>
 
           </div>
@@ -473,228 +415,199 @@
         <!-- 3. TUDDU: SALESFORCE HOSPITAL MANAGEMENT CRM -->
         <div class="tuddu-card group" data-category="salesforce">
           
-          <!-- Picture Box with Toast Badge -->
           <div class="tuddu-pic-box">
-            <!-- Toast Category Badge -->
-            <span class="toast-badge bg-indigo-600 text-white">
+            <span class="toast-badge bg-indigo-600">
               ☁️ Healthcare CRM
             </span>
 
-            <!-- Graphical SVG Preview for Salesforce CRM -->
             <svg class="tuddu-preview-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="400" height="220" fill="#1e1b4b"/>
-              <!-- Top bar -->
-              <rect x="0" y="0" width="400" height="28" fill="#312e81"/>
-              <circle cx="16" cy="14" r="4" fill="#f43f5e"/>
-              <circle cx="28" cy="14" r="4" fill="#fbbf24"/>
-              <circle cx="40" cy="14" r="4" fill="#10b981"/>
-              <text x="60" y="18" fill="#c7d2fe" font-family="monospace" font-size="10" font-weight="bold">salesforce.com — Hospital Care Console</text>
+              <rect x="0" y="0" width="400" height="26" fill="#312e81"/>
+              <circle cx="16" cy="13" r="3.5" fill="#f43f5e"/>
+              <circle cx="27" cy="13" r="3.5" fill="#fbbf24"/>
+              <circle cx="38" cy="13" r="3.5" fill="#10b981"/>
+              <text x="55" y="17" fill="#c7d2fe" font-family="monospace" font-size="10" font-weight="bold">salesforce.com — Hospital Operations CRM</text>
 
-              <!-- Relational Data Model -->
-              <rect x="25" y="45" width="110" height="65" rx="6" fill="#4338ca" opacity="0.6"/>
-              <text x="35" y="65" fill="#e0e7ff" font-family="sans-serif" font-size="10" font-weight="bold">Patients & Records</text>
-              <text x="35" y="85" fill="#a5b4fc" font-family="monospace" font-size="9">OWD: Private</text>
-              <text x="35" y="100" fill="#818cf8" font-family="monospace" font-size="8">HIPAA Compliance</text>
+              <rect x="25" y="45" width="105" height="65" rx="6" fill="#4338ca" opacity="0.6"/>
+              <text x="33" y="65" fill="#e0e7ff" font-family="sans-serif" font-size="9" font-weight="bold">Patients &amp; Doctors</text>
+              <text x="33" y="85" fill="#a5b4fc" font-family="monospace" font-size="8">Custom Objects</text>
+              <text x="33" y="100" fill="#818cf8" font-family="monospace" font-size="8">OWD Security</text>
 
-              <rect x="145" y="45" width="110" height="65" rx="6" fill="#4338ca" opacity="0.6"/>
-              <text x="155" y="65" fill="#e0e7ff" font-family="sans-serif" font-size="10" font-weight="bold">Appointments</text>
-              <text x="155" y="85" fill="#a5b4fc" font-family="monospace" font-size="9">Apex Trigger</text>
-              <text x="155" y="100" fill="#818cf8" font-family="monospace" font-size="8">Conflict Check</text>
+              <rect x="145" y="45" width="105" height="65" rx="6" fill="#4338ca" opacity="0.6"/>
+              <text x="153" y="65" fill="#e0e7ff" font-family="sans-serif" font-size="9" font-weight="bold">Appointments</text>
+              <text x="153" y="85" fill="#a5b4fc" font-family="monospace" font-size="8">Apex Trigger</text>
+              <text x="153" y="100" fill="#818cf8" font-family="monospace" font-size="8">Conflict Check</text>
 
               <rect x="265" y="45" width="110" height="65" rx="6" fill="#4338ca" opacity="0.6"/>
-              <text x="275" y="65" fill="#e0e7ff" font-family="sans-serif" font-size="10" font-weight="bold">Billing Engine</text>
-              <text x="275" y="85" fill="#a5b4fc" font-family="monospace" font-size="9">Record Flows</text>
-              <text x="275" y="100" fill="#818cf8" font-family="monospace" font-size="8">Roll-up Totals</text>
+              <text x="273" y="65" fill="#e0e7ff" font-family="sans-serif" font-size="9" font-weight="bold">Billing Engine</text>
+              <text x="273" y="85" fill="#a5b4fc" font-family="monospace" font-size="8">Record Flows</text>
+              <text x="273" y="100" fill="#818cf8" font-family="monospace" font-size="8">Roll-up Totals</text>
 
-              <!-- Executive Chart -->
-              <rect x="25" y="125" width="350" height="75" rx="8" fill="#0f172a" opacity="0.8"/>
-              <text x="35" y="145" fill="#e0e7ff" font-family="monospace" font-size="9">Department Revenue & Doctor Availability Matrix</text>
-              <rect x="35" y="160" width="70" height="25" rx="4" fill="#6366f1"/>
-              <rect x="115" y="165" width="90" height="20" rx="4" fill="#06b6d4"/>
-              <rect x="215" y="155" width="80" height="30" rx="4" fill="#10b981"/>
-              <rect x="305" y="162" width="60" height="23" rx="4" fill="#f59e0b"/>
+              <rect x="25" y="125" width="350" height="70" rx="6" fill="#0f172a" opacity="0.8"/>
+              <text x="35" y="145" fill="#e0e7ff" font-family="monospace" font-size="9">Hospital Revenue &amp; Department Analytics</text>
+              <rect x="35" y="160" width="70" height="20" rx="3" fill="#6366f1"/>
+              <rect x="115" y="163" width="90" height="17" rx="3" fill="#06b6d4"/>
+              <rect x="215" y="155" width="80" height="25" rx="3" fill="#10b981"/>
+              <rect x="305" y="160" width="60" height="20" rx="3" fill="#f59e0b"/>
             </svg>
           </div>
 
-          <!-- Card Content -->
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">
-                Hospital Operations & Management CRM
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 transition-colors">
+                Hospital Operations CRM
               </h3>
-              <p class="text-xs text-indigo-700 font-mono font-semibold">
-                ✦ Salesforce DX • Apex Handlers • Record Flows • OWD Security
+              <p class="text-xs text-indigo-700 dark:text-indigo-400 font-mono font-medium">
+                Salesforce DX, Apex &amp; Flows
               </p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Enterprise healthcare management CRM automating patient intake, doctor appointments, prescription dispatch, and billing with strict Organization-Wide Defaults (OWD) and HIPAA confidentiality.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Hospital management system built on Salesforce. Automates patient appointments, doctor scheduling, and billing invoices with Apex Triggers and Record-Triggered Flows.
               </p>
 
-              <!-- Tech Tags -->
-              <div class="flex flex-wrap gap-1.5 pt-2">
+              <div class="flex flex-wrap gap-1 pt-1">
                 <span class="skill-tag">Salesforce DX</span>
-                <span class="skill-tag">Apex Triggers</span>
-                <span class="skill-tag">SOQL</span>
+                <span class="skill-tag">Apex</span>
                 <span class="skill-tag">Flows</span>
-                <span class="skill-tag">OWD Model</span>
+                <span class="skill-tag">SOQL</span>
               </div>
             </div>
 
-            <!-- Action Links -->
-            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
-              <a href="https://github.com/Kundan62065/Hospital-Management-Salesforce" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
-                <span>View Project ↗</span>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://github.com/Kundan62065/Hospital-Management-Salesforce" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+                <span>GitHub Repo ↗</span>
               </a>
-              <span class="text-slate-400 font-mono text-[11px]">Teqfocus Certified</span>
+              <span class="text-slate-400 font-mono text-[11px]">Teqfocus Cert</span>
             </div>
 
           </div>
         </div>
 
-        <!-- 4. TUDDU: MERN NOTE (PRODUCTIVITY WORKSPACE) -->
+        <!-- 4. TUDDU: MERN NOTE -->
         <div class="tuddu-card group" data-category="mern">
           
-          <!-- Picture Box with Toast Badge -->
           <div class="tuddu-pic-box">
-            <!-- Toast Category Badge -->
-            <span class="toast-badge bg-teal-600 text-white">
-              📝 Cloud Productivity
+            <span class="toast-badge bg-teal-600">
+              📝 Productivity App
             </span>
 
-            <!-- Graphical SVG Preview for MERN Note -->
             <svg class="tuddu-preview-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="400" height="220" fill="#134e4a"/>
-              <!-- Top bar -->
-              <rect x="0" y="0" width="400" height="28" fill="#115e59"/>
-              <circle cx="16" cy="14" r="4" fill="#f43f5e"/>
-              <circle cx="28" cy="14" r="4" fill="#fbbf24"/>
-              <circle cx="40" cy="14" r="4" fill="#10b981"/>
-              <text x="60" y="18" fill="#99f6e4" font-family="monospace" font-size="10" font-weight="bold">mern-notes-app.dev — Google OAuth 2.0</text>
+              <rect x="0" y="0" width="400" height="26" fill="#115e59"/>
+              <circle cx="16" cy="13" r="3.5" fill="#f43f5e"/>
+              <circle cx="27" cy="13" r="3.5" fill="#fbbf24"/>
+              <circle cx="38" cy="13" r="3.5" fill="#10b981"/>
+              <text x="55" y="17" fill="#99f6e4" font-family="monospace" font-size="10" font-weight="bold">mern-notes.app — Note Workspace</text>
 
-              <!-- Sticky Note Grid Mockup -->
-              <rect x="25" y="45" width="168" height="68" rx="8" fill="#14b8a6" opacity="0.3"/>
-              <text x="35" y="65" fill="#ccfbf1" font-family="sans-serif" font-size="10" font-weight="bold">Sprint Architecture Notes</text>
-              <text x="35" y="82" fill="#e2e8f0" font-family="monospace" font-size="9">JWT Authentication token validation</text>
-              <text x="35" y="98" fill="#5eead4" font-family="monospace" font-size="8">Tag: #FullStack #Security</text>
+              <rect x="25" y="45" width="168" height="65" rx="6" fill="#14b8a6" opacity="0.3"/>
+              <text x="35" y="65" fill="#ccfbf1" font-family="sans-serif" font-size="9" font-weight="bold">Quick Dev Notes</text>
+              <text x="35" y="82" fill="#e2e8f0" font-family="monospace" font-size="9">JWT Token authentication</text>
+              <text x="35" y="98" fill="#5eead4" font-family="monospace" font-size="8">Tag: #FullStack</text>
 
-              <rect x="207" y="45" width="168" height="68" rx="8" fill="#0d9488" opacity="0.4"/>
-              <text x="217" y="65" fill="#ccfbf1" font-family="sans-serif" font-size="10" font-weight="bold">Smart Contract Audit Check</text>
-              <text x="217" y="82" fill="#e2e8f0" font-family="monospace" font-size="9">SWC-107 CEI patterns review</text>
-              <text x="217" y="98" fill="#5eead4" font-family="monospace" font-size="8">Tag: #Solidity #Web3</text>
+              <rect x="207" y="45" width="168" height="65" rx="6" fill="#0d9488" opacity="0.4"/>
+              <text x="217" y="65" fill="#ccfbf1" font-family="sans-serif" font-size="9" font-weight="bold">Salesforce Task Items</text>
+              <text x="217" y="82" fill="#e2e8f0" font-family="monospace" font-size="9">Apex handler test suite</text>
+              <text x="217" y="98" fill="#5eead4" font-family="monospace" font-size="8">Tag: #Salesforce</text>
 
-              <!-- Bottom Search Bar & Google Sign-in Mockup -->
-              <rect x="25" y="130" width="350" height="65" rx="8" fill="#0f172a" opacity="0.8"/>
-              <rect x="35" y="145" width="220" height="35" rx="6" fill="#1e293b"/>
-              <text x="45" y="167" fill="#94a3b8" font-family="monospace" font-size="9">🔍 Instant search all tags...</text>
-              <rect x="265" y="145" width="100" height="35" rx="6" fill="#0f766e"/>
-              <text x="275" y="167" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">G-Auth 2.0 ✔</text>
+              <rect x="25" y="125" width="350" height="65" rx="6" fill="#0f172a" opacity="0.8"/>
+              <rect x="35" y="140" width="210" height="32" rx="4" fill="#1e293b"/>
+              <text x="45" y="160" fill="#94a3b8" font-family="monospace" font-size="9">🔍 Search notes by tags...</text>
+              <rect x="255" y="140" width="110" height="32" rx="4" fill="#0f766e"/>
+              <text x="265" y="160" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">Google Auth ✔</text>
             </svg>
           </div>
 
-          <!-- Card Content -->
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
-                MERN Note: Multi-Auth Cloud Workspace
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">
+                MERN Note App
               </h3>
-              <p class="text-xs text-teal-700 font-mono font-semibold">
-                ✦ Google OAuth 2.0 • JWT Auth • MongoDB Atlas • React
+              <p class="text-xs text-teal-700 dark:text-teal-400 font-mono font-medium">
+                React, Node.js, Express &amp; MongoDB
               </p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Cloud notes platform featuring frictionless Google OAuth 2.0 and JWT token authentication. Includes instant search, markdown previews, tag categorization, and session security.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Cloud notes application with instant Google OAuth and JWT authentication. Allows creating, searching, categorizing notes, and copying content with one tap.
               </p>
 
-              <!-- Tech Tags -->
-              <div class="flex flex-wrap gap-1.5 pt-2">
+              <div class="flex flex-wrap gap-1 pt-1">
                 <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Express.js</span>
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Google OAuth</span>
+                <span class="skill-tag">Express</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node</span>
+                <span class="skill-tag">OAuth</span>
               </div>
             </div>
 
-            <!-- Action Links -->
-            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
-              <a href="https://github.com/Kundan62065/mern-jwt-notes-app" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
-                <span>View Project ↗</span>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://github.com/Kundan62065/mern-jwt-notes-app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+                <span>GitHub Repo ↗</span>
               </a>
-              <span class="text-slate-400 font-mono text-[11px]">Full Stack MERN</span>
+              <span class="text-slate-400 font-mono text-[11px]">Personal Project</span>
             </div>
 
           </div>
         </div>
 
-        <!-- 5. TUDDU: MINI EKART (E-COMMERCE ENGINE) -->
+        <!-- 5. TUDDU: MINI EKART -->
         <div class="tuddu-card group" data-category="mern">
           
-          <!-- Picture Box with Toast Badge -->
           <div class="tuddu-pic-box">
-            <!-- Toast Category Badge -->
-            <span class="toast-badge bg-amber-600 text-white">
-              🛒 Full-Stack E-Commerce
+            <span class="toast-badge bg-amber-600">
+              🛒 E-Commerce
             </span>
 
-            <!-- Graphical SVG Preview for Mini-eKart -->
             <svg class="tuddu-preview-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="400" height="220" fill="#78350f"/>
-              <!-- Top bar -->
-              <rect x="0" y="0" width="400" height="28" fill="#92400e"/>
-              <circle cx="16" cy="14" r="4" fill="#f43f5e"/>
-              <circle cx="28" cy="14" r="4" fill="#fbbf24"/>
-              <circle cx="40" cy="14" r="4" fill="#10b981"/>
-              <text x="60" y="18" fill="#fde68a" font-family="monospace" font-size="10" font-weight="bold">mini-ekart-app.vercel.app — Storefront</text>
+              <rect x="0" y="0" width="400" height="26" fill="#92400e"/>
+              <circle cx="16" cy="13" r="3.5" fill="#f43f5e"/>
+              <circle cx="27" cy="13" r="3.5" fill="#fbbf24"/>
+              <circle cx="38" cy="13" r="3.5" fill="#10b981"/>
+              <text x="55" y="17" fill="#fde68a" font-family="monospace" font-size="10" font-weight="bold">mini-ekart-app.vercel.app — Storefront</text>
 
-              <!-- Products Grid Mockup -->
-              <rect x="25" y="45" width="105" height="70" rx="6" fill="#b45309" opacity="0.6"/>
-              <rect x="35" y="55" width="85" height="35" rx="4" fill="#f59e0b"/>
-              <text x="35" y="105" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Product Item A</text>
+              <rect x="25" y="45" width="105" height="65" rx="6" fill="#b45309" opacity="0.6"/>
+              <rect x="35" y="55" width="85" height="30" rx="4" fill="#f59e0b"/>
+              <text x="35" y="100" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Product Item A</text>
 
-              <rect x="145" y="45" width="105" height="70" rx="6" fill="#b45309" opacity="0.6"/>
-              <rect x="155" y="55" width="85" height="35" rx="4" fill="#d97706"/>
-              <text x="155" y="105" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Product Item B</text>
+              <rect x="145" y="45" width="105" height="65" rx="6" fill="#b45309" opacity="0.6"/>
+              <rect x="155" y="55" width="85" height="30" rx="4" fill="#d97706"/>
+              <text x="155" y="100" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Product Item B</text>
 
-              <rect x="265" y="45" width="110" height="70" rx="6" fill="#b45309" opacity="0.6"/>
-              <rect x="275" y="55" width="90" height="35" rx="4" fill="#f59e0b"/>
-              <text x="275" y="105" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Product Item C</text>
+              <rect x="265" y="45" width="110" height="65" rx="6" fill="#b45309" opacity="0.6"/>
+              <rect x="275" y="55" width="90" height="30" rx="4" fill="#f59e0b"/>
+              <text x="275" y="100" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Product Item C</text>
 
-              <!-- Checkout & Razorpay Bar -->
-              <rect x="25" y="130" width="350" height="65" rx="8" fill="#0f172a" opacity="0.8"/>
-              <text x="35" y="152" fill="#fef3c7" font-family="monospace" font-size="9">Cart: 3 Items • Razorpay Gateway Active • Multer/Cloudinary Storage</text>
-              <rect x="35" y="162" width="160" height="22" rx="4" fill="#059669"/>
-              <text x="45" y="177" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">Secure Checkout Complete ✔</text>
+              <rect x="25" y="125" width="350" height="65" rx="6" fill="#0f172a" opacity="0.8"/>
+              <text x="35" y="148" fill="#fef3c7" font-family="monospace" font-size="9">Shopping Cart • Razorpay Payments • Cloudinary</text>
+              <rect x="35" y="158" width="150" height="22" rx="4" fill="#059669"/>
+              <text x="45" y="173" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">Secure Checkout ✔</text>
             </svg>
           </div>
 
-          <!-- Card Content -->
-          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
-                Mini-eKart: Scalable E-Commerce Engine
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div class="space-y-1.5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 transition-colors">
+                Mini-eKart App
               </h3>
-              <p class="text-xs text-amber-700 font-mono font-semibold">
-                ✦ Razorpay • Cloudinary • Nodemailer Verification • MERN
+              <p class="text-xs text-amber-700 dark:text-amber-400 font-mono font-medium">
+                MERN, Razorpay &amp; Cloudinary
               </p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Full-featured online shopping platform with dynamic product catalog, category filters, Multer & Cloudinary cloud image uploads, Razorpay payments, and admin inventory CRUD.
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                Online shopping web store with product filters, cart management, Cloudinary image upload, and Razorpay payment integration with an admin CRUD panel.
               </p>
 
-              <!-- Tech Tags -->
-              <div class="flex flex-wrap gap-1.5 pt-2">
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">Node.js</span>
+              <div class="flex flex-wrap gap-1 pt-1">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node</span>
                 <span class="skill-tag">Razorpay</span>
                 <span class="skill-tag">Cloudinary</span>
-                <span class="skill-tag">Nodemailer</span>
               </div>
             </div>
 
-            <!-- Action Links -->
-            <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
-              <a href="https://mini-ekart-app-wv57.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-mono font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
-                <span>View Project ↗</span>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <a href="https://mini-ekart-app-wv57.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-sm transition-all">
+                <span>Live Demo ↗</span>
               </a>
-              <a href="https://github.com/Kundan62065/MINI-EKART-APP" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 font-mono text-[11px] transition-all">
-                GitHub Repo
+              <a href="https://github.com/Kundan62065/MINI-EKART-APP" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-mono text-[11px] hover:text-black dark:hover:text-white">
+                GitHub
               </a>
             </div>
 
@@ -705,92 +618,62 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-            <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-            About My Background
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Engineering robust systems from the <span class="gradient-text">smart contract layer</span> to enterprise cloud.
+        <div class="lg:col-span-6 space-y-4">
+          <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+            About Me
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Building software with clean code and real-world impact.
           </h2>
-          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-            I am currently in my 3rd year pursuing a Bachelor of Technology in <strong>Computer Engineering</strong> at the <strong>National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi</strong> with an ongoing CGPA of <strong>8.65</strong>.
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            I am currently in my 3rd year pursuing B.Tech in <strong>Computer Engineering</strong> at <strong>NIAMT Ranchi</strong> (CGPA: <strong>8.65</strong>).
           </p>
-          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-            My technical focus lies at the intersection of <strong>Web3 Cybersecurity</strong>, <strong>Enterprise Salesforce Development</strong>, and <strong>Full-Stack Real-Time Systems</strong>. Whether it's crafting attack-resistant smart contracts defending against reentrancy and rug-pull exploits, or architecting Indian Railways shift management with millisecond socket alerts, I build systems engineered for resilience, data confidentiality, and mission-critical scale.
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            I enjoy building software that solves practical operational challenges—whether it's managing real-time duty shifts for Indian Railways with socket events, building enterprise CRM processes on Salesforce, or developing responsive full-stack MERN applications.
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm space-y-1">
-              <div class="font-mono text-xs text-emerald-600 font-bold">01. Academic Foundation</div>
-              <div class="font-bold text-slate-900 text-sm">NIAMT Ranchi (2023-2027)</div>
-              <div class="text-xs text-slate-500">Computer Engineering • CGPA: 8.65</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-bold">College Education</div>
+              <div class="font-bold text-slate-900 dark:text-white text-sm">NIAMT Ranchi</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">B.Tech (2023–2027) • CGPA: 8.65</div>
             </div>
-            <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm space-y-1">
-              <div class="font-mono text-xs text-cyan-600 font-bold">02. Secondary Education</div>
-              <div class="font-bold text-slate-900 text-sm">SRK D.A.V Public School</div>
-              <div class="text-xs text-slate-500">CBSE Board (2022) • 81%</div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+              <div class="font-mono text-xs text-cyan-600 dark:text-cyan-400 font-bold">Schooling</div>
+              <div class="font-bold text-slate-900 dark:text-white text-sm">SRK D.A.V Public School</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400">CBSE Class XII (2022) • 81%</div>
             </div>
           </div>
         </div>
 
-        <!-- Right Side: Tactical Security Highlights Card -->
+        <!-- Skills Overview Card -->
         <div class="lg:col-span-6">
-          <div class="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 space-y-6 shadow-md">
-            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 font-mono text-lg shadow-sm">
-                  🛡️
-                </div>
-                <div>
-                  <h3 class="font-bold text-slate-900 text-base">Core Technical Principles</h3>
-                  <p class="text-xs text-slate-500 font-mono">Security-First Software Architecture</p>
-                </div>
-              </div>
-              <span class="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">DEFENSE IN DEPTH</span>
-            </div>
-
-            <div class="space-y-4">
-              <div class="flex items-start gap-3">
-                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs mt-0.5 shrink-0 font-bold">✓</span>
-                <div>
-                  <h4 class="text-sm font-bold text-slate-900">Checks-Effects-Interactions (CEI) & Mutex Guards</h4>
-                  <p class="text-xs text-slate-500 mt-0.5">Eliminating SWC-107 reentrancy vulnerabilities before executing external calls.</p>
-                </div>
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Technical Focus</h3>
+            
+            <div class="space-y-3 text-xs">
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+                <div class="font-bold text-cyan-600 dark:text-cyan-400">Real-Time Systems &amp; Web Development</div>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5">React 18, Node.js, Express, Socket.IO, MongoDB, Tailwind CSS, REST APIs.</p>
               </div>
 
-              <div class="flex items-start gap-3">
-                <span class="w-5 h-5 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-xs mt-0.5 shrink-0 font-bold">✓</span>
-                <div>
-                  <h4 class="text-sm font-bold text-slate-900">Pull-over-Push Payment Architectures</h4>
-                  <p class="text-xs text-slate-500 mt-0.5">Preventing SWC-113 Denial of Service (DoS) and gas exhaustion during multi-party refunds.</p>
-                </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+                <div class="font-bold text-indigo-600 dark:text-indigo-400">Salesforce Platform Development</div>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5">Salesforce DX, Apex Triggers, SOQL, Record-Triggered Flows, OWD Security Model.</p>
               </div>
 
-              <div class="flex items-start gap-3">
-                <span class="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs mt-0.5 shrink-0 font-bold">✓</span>
-                <div>
-                  <h4 class="text-sm font-bold text-slate-900">Decentralized Quorum & Anti-Rugpull Governance</h4>
-                  <p class="text-xs text-slate-500 mt-0.5">Removing single-owner fund drainage risks (SWC-105) through >50% backer consensus voting.</p>
-                </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+                <div class="font-bold text-emerald-600 dark:text-emerald-400">Web3 &amp; Smart Contracts</div>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5">Solidity 0.8.20, Web3.js, Checks-Effects-Interactions (CEI), Reentrancy Mutex guards.</p>
               </div>
 
-              <div class="flex items-start gap-3">
-                <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs mt-0.5 shrink-0 font-bold">✓</span>
-                <div>
-                  <h4 class="text-sm font-bold text-slate-900">Enterprise CRM Confidentiality (OWD & RBAC)</h4>
-                  <p class="text-xs text-slate-500 mt-0.5">Implementing Organization-Wide Defaults, field-level security, and Apex triggers for hospital compliance.</p>
-                </div>
+              <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+                <div class="font-bold text-amber-600 dark:text-amber-400">Core Languages &amp; Tools</div>
+                <p class="text-slate-600 dark:text-slate-400 mt-0.5">Java, C, C++, JavaScript (ES6+), Python, Git, GitHub Actions, Vercel.</p>
               </div>
-            </div>
-
-            <div class="pt-2">
-              <a href="#projects" class="text-xs font-mono font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
-                Explore project implementations →
-              </a>
             </div>
           </div>
         </div>
@@ -798,414 +681,101 @@
       </div>
     </section>
 
-    <!-- LEADERSHIP, COMMUNITY HEAD & CYBERSECURITY AWARENESS -->
-    <section id="leadership" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white rounded-3xl my-8 border border-slate-200 shadow-sm">
-      
-      <div class="space-y-3 mb-12">
-        <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-          <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-          Leadership & Community Impact
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Community Leadership & Cybersecurity Awareness
+    <!-- LEADERSHIP & COMMUNITY -->
+    <section id="leadership" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="mb-8">
+        <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+          Community &amp; College Roles
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
+          Leadership &amp; Activities
         </h2>
-        <p class="text-slate-600 text-sm max-w-2xl">
-          Driving technical literacy, defensive cybersecurity training, and institute governance across campus and community organizations.
-        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-        <!-- 1. TECHNICAL LEADER: CODE FORGE -->
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 transition-all space-y-4 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-700 font-mono text-xl shadow-sm">
-            💻
-          </div>
-          <div>
-            <span class="text-[11px] font-mono text-emerald-700 uppercase font-bold tracking-wider">Technical Leader</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Code Forge — NIAMT Ranchi</h3>
-            <p class="text-xs text-slate-500 font-mono">Community of Cybersecurity & Blockchain</p>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Lead developer community initiatives focused on defensive blockchain security, smart contract vulnerabilities, and secure coding practices. Mentored 100+ students, hosted live hackathons, and curated technical challenges.
-          </p>
-          <div class="pt-2 text-[11px] font-mono font-bold text-emerald-700 flex items-center gap-1.5">
-            <span>✦ 100+ Students Mentored</span>
-          </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
+          <div class="text-emerald-600 dark:text-emerald-400 font-bold text-sm">Technical Leader</div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">Code Forge @ NIAMT</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Led coding community sessions, guided peers in web development and basic smart contract concepts.</p>
         </div>
 
-        <!-- 2. CYBERSECURITY AWARENESS PROGRAMS -->
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-500 transition-all space-y-4 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-cyan-100 border border-cyan-200 flex items-center justify-center text-cyan-700 font-mono text-xl shadow-sm">
-            🛡️
-          </div>
-          <div>
-            <span class="text-[11px] font-mono text-cyan-700 uppercase font-bold tracking-wider">Speaker & Coordinator</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Cybersecurity Awareness Programs</h3>
-            <p class="text-xs text-slate-500 font-mono">Campus & Student Outreach</p>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Organized and conducted interactive workshops on digital hygiene, phishing attack prevention, multi-factor authentication, credential safety, and Web3 crypto safety for engineering and non-engineering students.
-          </p>
-          <div class="pt-2 text-[11px] font-mono font-bold text-cyan-700 flex items-center gap-1.5">
-            <span>✦ Threat Simulation & Defense Demos</span>
-          </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
+          <div class="text-cyan-600 dark:text-cyan-400 font-bold text-sm">Awareness Coordinator</div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">Cybersecurity Programs</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Conducted student workshops on digital hygiene, strong password habits, and phishing prevention.</p>
         </div>
 
-        <!-- 3. SPORTS SECRETARY: SFU GYMKHANA -->
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-500 transition-all space-y-4 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-indigo-100 border border-indigo-200 flex items-center justify-center text-indigo-700 font-mono text-xl shadow-sm">
-            ⚽
-          </div>
-          <div>
-            <span class="text-[11px] font-mono text-indigo-700 uppercase font-bold tracking-wider">Executive Secretary</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Sports Secretary — SFU Gymkhana</h3>
-            <p class="text-xs text-slate-500 font-mono">NIAMT Ranchi (2025 – 2026)</p>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Elected to lead campus athletic operations, budgeting, and tournament scheduling. Championed inter-departmental Football and Chess Championships, fostering strategic resilience, physical agility, and crisis leadership under pressure.
-          </p>
-          <div class="pt-2 text-[11px] font-mono font-bold text-indigo-700 flex items-center gap-1.5">
-            <span>✦ Winners & Runner-up in Football & Chess</span>
-          </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
+          <div class="text-indigo-600 dark:text-indigo-400 font-bold text-sm">Sports Secretary</div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">SFU Gymkhana (2025–26)</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Organized campus football and chess tournaments, managing event logistics and teams.</p>
         </div>
 
-        <!-- 4. CULTURAL HEAD: MISSION KARTAVYA FOUNDATION -->
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-amber-500 transition-all space-y-4 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-700 font-mono text-xl shadow-sm">
-            🤝
-          </div>
-          <div>
-            <span class="text-[11px] font-mono text-amber-700 uppercase font-bold tracking-wider">Community Head</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Cultural Head — Mission Kartavya</h3>
-            <p class="text-xs text-slate-500 font-mono">Non-Governmental Organization (NGO)</p>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Directing grassroots education and community development initiatives. Spearheaded <strong>Kartavya-Tech</strong> workshops introducing basic programming and digital tools to underprivileged youth.
-          </p>
-          <div class="pt-2 text-[11px] font-mono font-bold text-amber-700 flex items-center gap-1.5">
-            <span>✦ Kartavya-Tech Outreach Lead</span>
-          </div>
-        </div>
-
-        <!-- 5. IEEE STUDENT BRANCH -->
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-400 transition-all space-y-4 md:col-span-2 lg:col-span-2 shadow-sm">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-xl bg-slate-200 border border-slate-300 flex items-center justify-center text-slate-800 font-mono text-xl shadow-sm">
-              ⚡
-            </div>
-            <div>
-              <span class="text-[11px] font-mono text-slate-500 uppercase font-bold tracking-wider">Active Member</span>
-              <h3 class="text-lg font-bold text-slate-900">IEEE Student Branch — NIAMT Ranchi</h3>
-            </div>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Active participant and organizer for IEEE technical symposiums, research seminars, and state-level engineering exhibitions. Fostering multidisciplinary peer collaboration across computing and automation.
-          </p>
-          <div class="pt-2 text-[11px] font-mono text-slate-600 flex items-center gap-3">
-            <span>✦ Technical Seminars</span>
-            <span>✦ Hackathon Operations</span>
-            <span>✦ Research Discussions</span>
-          </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2 shadow-sm">
+          <div class="text-amber-600 dark:text-amber-400 font-bold text-sm">Cultural Head</div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm">Mission Kartavya (NGO)</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400">Coordinated educational outreach and Kartavya-Tech activities for student community welfare.</p>
         </div>
 
       </div>
     </section>
 
-    <!-- TECHNICAL TOOLBOX (SKILLS) -->
-    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      
-      <div class="space-y-3 mb-12">
-        <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-          <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-          Technical Matrix
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          My Technical Toolbox
-        </h2>
-        <p class="text-slate-600 text-sm max-w-2xl">
-          Core competencies across smart contract security, Salesforce enterprise development, full-stack web engineering, and foundational computing.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- 1. CYBERSECURITY & WEB3 -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-4 shadow-sm">
-          <div class="flex items-center gap-2 text-emerald-700 font-mono text-sm font-bold">
-            <span>🛡️</span> Cybersecurity & Web3
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag">Solidity 0.8.20</span>
-            <span class="skill-tag">Web3.js</span>
-            <span class="skill-tag">Smart Contract Auditing</span>
-            <span class="skill-tag">Reentrancy (SWC-107)</span>
-            <span class="skill-tag">Pull Payments (SWC-113)</span>
-            <span class="skill-tag">Rugpull Governance (SWC-105)</span>
-            <span class="skill-tag">STRIDE Threat Modeling</span>
-            <span class="skill-tag">Kali Linux</span>
-            <span class="skill-tag">JWT Security</span>
-            <span class="skill-tag">Google OAuth 2.0</span>
-          </div>
-        </div>
-
-        <!-- 2. SALESFORCE PLATFORM -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-4 shadow-sm">
-          <div class="flex items-center gap-2 text-cyan-700 font-mono text-sm font-bold">
-            <span>☁️</span> Salesforce Platform
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag">Salesforce DX (SFDX)</span>
-            <span class="skill-tag">Apex Triggers</span>
-            <span class="skill-tag">Handler Pattern</span>
-            <span class="skill-tag">SOQL & SOSL</span>
-            <span class="skill-tag">Record-Triggered Flows</span>
-            <span class="skill-tag">Screen Flows</span>
-            <span class="skill-tag">Custom Data Models</span>
-            <span class="skill-tag">OWD & Sharing Rules</span>
-            <span class="skill-tag">Reports & Dashboards</span>
-            <span class="skill-tag">Teqfocus Certified</span>
-          </div>
-        </div>
-
-        <!-- 3. FULL STACK DEVELOPMENT -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-4 shadow-sm">
-          <div class="flex items-center gap-2 text-indigo-700 font-mono text-sm font-bold">
-            <span>🌐</span> Full Stack Development
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag">React 18</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">Socket.IO</span>
-            <span class="skill-tag">RESTful APIs</span>
-            <span class="skill-tag">MongoDB Atlas</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Razorpay</span>
-            <span class="skill-tag">Cloudinary</span>
-            <span class="skill-tag">Tailwind CSS</span>
-          </div>
-        </div>
-
-        <!-- 4. CORE LANGUAGES & DEVOPS -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-4 shadow-sm">
-          <div class="flex items-center gap-2 text-amber-700 font-mono text-sm font-bold">
-            <span>⚙️</span> Languages & DevOps
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="skill-tag">Java (OOP)</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">C++ (STL)</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">Vercel & Render</span>
-            <span class="skill-tag">Postman</span>
-            <span class="skill-tag">Linux CLI</span>
-            <span class="skill-tag">Google Colab</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- EXPERIENCE & CERTIFICATIONS -->
-    <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      
-      <div class="space-y-3 mb-12">
-        <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-          <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-          Verified Accreditations
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Certifications & Industrial Exposure
-        </h2>
-        <p class="text-slate-600 text-sm max-w-2xl">
-          Formal credentials earned in CRM engineering, railway operations, web architecture, and cybersecurity.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <!-- 1. SALESFORCE CRM CERTIFICATION -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-3 shadow-sm">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-xs font-mono font-bold text-indigo-700">Enterprise CRM</span>
-              <h3 class="text-lg font-bold text-slate-900 mt-0.5">Salesforce CRM Developer Certification</h3>
-              <p class="text-xs text-slate-500">Teqfocus, Ranchi</p>
-            </div>
-            <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">Verified</span>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            In-depth training on Apex programmatic development, Governor Limits mitigation, custom data modeling, security sharing rules, and declarative process automation.
-          </p>
-        </div>
-
-        <!-- 2. RAILWAY SHIFT CERTIFICATION -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-3 shadow-sm">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-xs font-mono font-bold text-cyan-700">Public Sector Systems</span>
-              <h3 class="text-lg font-bold text-slate-900 mt-0.5">Railway Shift Project Certification</h3>
-              <p class="text-xs text-slate-500">Hatia Ranchi (Eastern Division, Indian Railways)</p>
-            </div>
-            <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">Operational</span>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Recognized for architecture and deployment of the real-time crew shift tracking platform (DutyHours.in), improving shift transparency and fatigue warning compliance.
-          </p>
-        </div>
-
-        <!-- 3. CYBERSECURITY & BLOCKCHAIN CERTIFICATION -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-3 shadow-sm">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-xs font-mono font-bold text-emerald-700">Security Architecture</span>
-              <h3 class="text-lg font-bold text-slate-900 mt-0.5">Cybersecurity & Blockchain Architecture</h3>
-              <p class="text-xs text-slate-500">NIAMT Ranchi</p>
-            </div>
-            <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">Academic</span>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Specialized curriculum covering cryptographic hashing, consensus protocols, EVM architecture, vulnerability remediation, and smart contract threat modeling.
-          </p>
-        </div>
-
-        <!-- 4. WEB DEVELOPMENT CERTIFICATION -->
-        <div class="p-6 rounded-2xl bg-white border border-slate-200 space-y-3 shadow-sm">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-xs font-mono font-bold text-amber-700">Full Stack Engineering</span>
-              <h3 class="text-lg font-bold text-slate-900 mt-0.5">Full Stack Web Development Certification</h3>
-              <p class="text-xs text-slate-500">Internshala Trainings</p>
-            </div>
-            <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">Certified</span>
-          </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Hands-on certification across MERN architecture, RESTful API design, database normalization, responsive UI design, and cloud deployments.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT & GET IN TOUCH -->
-    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-xl">
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="p-6 sm:p-10 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <!-- Contact Left Info -->
-          <div class="lg:col-span-5 space-y-6">
-            <div class="inline-flex items-center gap-2 font-mono text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-              Get In Touch
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Let's Build Something Resilient Together.
+          <div class="lg:col-span-6 space-y-4">
+            <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
+              Get in Touch
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              Let's connect.
             </h2>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              Whether you have a software engineering opening, a Web3 security audit, a Salesforce project, or an innovative technical collaboration, my inbox is always open.
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              Feel free to reach out for software engineering roles, project collaboration, or just to say hi.
             </p>
 
-            <div class="space-y-3 font-mono text-xs">
-              
-              <!-- Email Card -->
-              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between group shadow-sm">
-                <div class="flex items-center gap-3">
-                  <span class="text-emerald-600 text-base">✉</span>
-                  <div>
-                    <div class="text-[10px] text-slate-500 uppercase font-bold">Primary Email</div>
-                    <a href="mailto:kundansawvks786@gmail.com" class="text-slate-900 hover:text-emerald-700 font-bold transition-colors">
-                      kundansawvks786@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <button class="copy-btn px-2.5 py-1 rounded bg-slate-200 text-slate-700 hover:bg-slate-300 font-semibold transition-colors" data-copy="kundansawvks786@gmail.com">
-                  Copy
-                </button>
+            <div class="space-y-2 font-mono text-xs">
+              <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                <span>✉ <a href="mailto:kundansawvks786@gmail.com" class="text-slate-900 dark:text-white font-bold hover:text-emerald-600">kundansawvks786@gmail.com</a></span>
+                <button class="copy-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-copy="kundansawvks786@gmail.com">Copy</button>
               </div>
 
-              <!-- Phone Card -->
-              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between group shadow-sm">
-                <div class="flex items-center gap-3">
-                  <span class="text-cyan-600 text-base">📞</span>
-                  <div>
-                    <div class="text-[10px] text-slate-500 uppercase font-bold">Phone & WhatsApp</div>
-                    <a href="tel:+916206597310" class="text-slate-900 hover:text-cyan-700 font-bold transition-colors">
-                      +91 6206597310
-                    </a>
-                  </div>
-                </div>
-                <button class="copy-btn px-2.5 py-1 rounded bg-slate-200 text-slate-700 hover:bg-slate-300 font-semibold transition-colors" data-copy="+916206597310">
-                  Copy
-                </button>
+              <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                <span>📞 <a href="tel:+916206597310" class="text-slate-900 dark:text-white font-bold hover:text-cyan-600">+91 6206597310</a></span>
+                <button class="copy-btn px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300" data-copy="+916206597310">Copy</button>
               </div>
-
-              <!-- Location Card -->
-              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3 shadow-sm">
-                <span class="text-indigo-600 text-base">📍</span>
-                <div>
-                  <div class="text-[10px] text-slate-500 uppercase font-bold">Location</div>
-                  <div class="text-slate-900 font-semibold">Ranchi, Jharkhand, India</div>
-                </div>
-              </div>
-
             </div>
 
-            <!-- Social Links -->
             <div class="flex items-center gap-3 pt-2">
-              <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white border border-slate-300 hover:border-emerald-600 text-slate-800 text-xs font-mono font-bold flex items-center gap-2 shadow-sm transition-all">
-                <span>LinkedIn</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-mono font-bold hover:border-emerald-500">
+                LinkedIn ↗
               </a>
-
-              <a href="https://github.com/Kundan62065" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white border border-slate-300 hover:border-emerald-600 text-slate-800 text-xs font-mono font-bold flex items-center gap-2 shadow-sm transition-all">
-                <span>GitHub</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              <a href="https://github.com/Kundan62065" target="_blank" class="px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-mono font-bold hover:border-emerald-500">
+                GitHub ↗
               </a>
-
-              <a href="resume.html" class="px-4 py-2 rounded-xl bg-emerald-50 border border-emerald-300 hover:border-emerald-600 text-emerald-800 text-xs font-mono font-bold flex items-center gap-2 shadow-sm transition-all">
-                <span>/resume</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <a href="resume.html" class="px-3.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold">
+                View /resume
               </a>
             </div>
-
           </div>
 
-          <!-- Contact Form -->
-          <div class="lg:col-span-7">
-            <form id="contactForm" class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 shadow-sm">
-              <h3 class="text-xl font-bold text-slate-900">Send a Direct Message</h3>
-              <p class="text-xs text-slate-500">Fill in the fields below or email me directly at <code class="text-emerald-700 font-bold">kundansawvks786@gmail.com</code>.</p>
+          <div class="lg:col-span-6">
+            <form id="contactForm" class="p-5 sm:p-6 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-3">
+              <h3 class="font-bold text-slate-900 dark:text-white text-sm">Send a Message</h3>
+              
+              <input type="text" id="senderName" required placeholder="Your Name" class="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500">
+              
+              <input type="email" id="senderEmail" required placeholder="Your Email" class="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500">
+              
+              <textarea id="message" rows="3" required placeholder="Your Message..." class="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-xs focus:outline-none focus:border-emerald-500"></textarea>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="space-y-1.5">
-                  <label class="block text-xs font-mono font-semibold text-slate-600">Your Name *</label>
-                  <input type="text" id="senderName" required placeholder="e.g. Alex Morgan" class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emerald-600 focus:outline-none text-slate-900 text-sm shadow-sm">
-                </div>
-                <div class="space-y-1.5">
-                  <label class="block text-xs font-mono font-semibold text-slate-600">Your Email *</label>
-                  <input type="email" id="senderEmail" required placeholder="alex@company.com" class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emerald-600 focus:outline-none text-slate-900 text-sm shadow-sm">
-                </div>
-              </div>
-
-              <div class="space-y-1.5">
-                <label class="block text-xs font-mono font-semibold text-slate-600">Subject</label>
-                <input type="text" id="subject" placeholder="Project Opportunity / Security Review / Collaboration" class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emerald-600 focus:outline-none text-slate-900 text-sm shadow-sm">
-              </div>
-
-              <div class="space-y-1.5">
-                <label class="block text-xs font-mono font-semibold text-slate-600">Message *</label>
-                <textarea id="message" rows="4" required placeholder="Hi Kundan, I came across your portfolio and would love to discuss..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emerald-600 focus:outline-none text-slate-900 text-sm shadow-sm"></textarea>
-              </div>
-
-              <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold font-mono text-sm tracking-wide shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer">
-                <span>Send Dispatch ⚡</span>
+              <button type="submit" class="w-full py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold font-mono text-xs cursor-pointer transition-all">
+                Send Email Dispatch ⚡
               </button>
-
-              <div id="formFeedback" class="hidden text-center text-xs font-mono py-2 rounded-lg"></div>
             </form>
           </div>
 
@@ -1217,102 +787,13 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-200 bg-white py-12 relative z-10 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      
-      <div class="flex items-center gap-3">
-        <span class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center font-mono text-xs font-bold text-emerald-700">
-          &lt;/&gt;
-        </span>
-        <div class="text-xs text-slate-600">
-          © 2026 <strong class="text-slate-900">Kundan Saw</strong>. Built for resilient engineering & Web3 security.
-        </div>
-      </div>
-
-      <div class="flex items-center gap-6 text-xs font-mono font-semibold text-slate-600">
-        <a href="#hero" class="hover:text-emerald-700 transition-colors">Back to Top ↑</a>
-        <a href="https://github.com/Kundan62065" target="_blank" class="hover:text-emerald-700 transition-colors">GitHub</a>
-        <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank" class="hover:text-emerald-700 transition-colors">LinkedIn</a>
-        <a href="resume.html" class="text-emerald-700 hover:underline">/resume</a>
-      </div>
-
-    </div>
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 text-xs font-mono text-slate-500 text-center">
+    <div>© 2026 Kundan Saw • NIAMT Ranchi • Built with clean code</div>
   </footer>
 
-  <!-- SECURITY AUDIT MODAL -->
-  <div id="auditModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-    <div class="bg-white border border-slate-300 rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 space-y-6 shadow-2xl relative">
-      
-      <button id="closeAuditModal" class="absolute top-5 right-5 text-slate-400 hover:text-black p-2 text-xl font-mono cursor-pointer">
-        ✕
-      </button>
-
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 font-mono text-lg shadow-sm">
-          🛡️
-        </div>
-        <div>
-          <h3 class="text-xl font-bold text-slate-900">SentinelFund Smart Contract Threat Matrix</h3>
-          <p class="text-xs text-slate-500 font-mono">Solidity 0.8.20 • STRIDE Vulnerability Analysis & Mitigations</p>
-        </div>
-      </div>
-
-      <div class="space-y-4 text-xs sm:text-sm text-slate-700">
-        
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h4 class="font-bold text-emerald-700 font-mono">1. SWC-107: Reentrancy Attack Protection</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            <strong>Threat:</strong> Malicious contract fallback functions recursively invoking withdrawal functions prior to balance deduction.
-          </p>
-          <p class="text-xs text-emerald-900 font-mono bg-emerald-50 border border-emerald-200 p-2 rounded">
-            Mitigation: Strict Checks-Effects-Interactions (CEI) where <code>contributions[msg.sender] = 0;</code> occurs before external transfer + custom <code>nonReentrant</code> mutex guard.
-          </p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h4 class="font-bold text-cyan-700 font-mono">2. SWC-105: Rug-Pull & Centralization Risk</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            <strong>Threat:</strong> Single campaign creator withdrawing 100% of the funds anonymously upon campaign closure.
-          </p>
-          <p class="text-xs text-cyan-900 font-mono bg-cyan-50 border border-cyan-200 p-2 rounded">
-            Mitigation: Elimination of unilateral <code>withdraw()</code>; milestone release requires decentralized backer quorum voting (<code>approvalCount > contributorCount / 2</code>).
-          </p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h4 class="font-bold text-indigo-700 font-mono">3. SWC-113: Denial of Service via Failed Call</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            <strong>Threat:</strong> Looping over contributor arrays during mass refunds fails if one address reverts or gas limit is exceeded.
-          </p>
-          <p class="text-xs text-indigo-900 font-mono bg-indigo-50 border border-indigo-200 p-2 rounded">
-            Mitigation: Pull-over-Push payments pattern. Backers call <code>claimRefund()</code> individually, isolating transactions.
-          </p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h4 class="font-bold text-amber-700 font-mono">4. Circuit Breaker Emergency Control</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            <strong>Threat:</strong> Zero-day protocol anomaly draining funds before patch deployment.
-          </p>
-          <p class="text-xs text-amber-900 font-mono bg-amber-50 border border-amber-200 p-2 rounded">
-            Mitigation: Emergency <code>isPaused</code> toggle halting contributions, votes, and disbursements during active incidents.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="pt-2 flex justify-end">
-        <a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold font-mono text-xs">
-          View Solidity Source Code on GitHub →
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Toast Notification Container -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-mono text-xs font-bold shadow-xl flex items-center gap-2">
-    <span>✓</span> <span id="toastMessage">Copied to clipboard!</span>
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 px-4 py-2 rounded-lg bg-emerald-600 text-white font-mono text-xs font-bold shadow-lg">
+    <span id="toastMessage">Copied!</span>
   </div>
 
   <script src="script.js"></script>
