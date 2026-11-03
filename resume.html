@@ -3,26 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kundan Saw - Resume</title>
+  <title>Kundan Saw - Resume (1-Page Original PDF & ATS View)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: #f8fafc;
       color: #1e293b;
       line-height: 1.5;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem 3rem 1rem;
     }
     .resume-wrapper {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto;
+    }
+
+    /* TOP DOWNLOAD BANNER */
+    .download-banner {
+      background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+      color: #ffffff;
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.25);
+    }
+    .banner-text h2 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .banner-text p {
+      font-size: 0.8rem;
+      color: #a7f3d0;
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 0.2rem;
+    }
+    .banner-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    /* Action Bar */
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1rem;
+      border-radius: 0.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-primary {
+      background: #10b981;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+    .btn-primary:hover {
+      background: #059669;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: #ffffff;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+    .btn-secondary:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .btn-dark {
+      background: #0f172a;
+      color: #ffffff;
+      border: 1px solid #334155;
+    }
+    .btn-dark:hover {
+      background: #1e293b;
+    }
+
+    /* View Switcher Tabs */
+    .view-tabs {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 0.25rem;
+      border-radius: 0.7rem;
+      margin-bottom: 1.25rem;
+      gap: 0.25rem;
+    }
+    .view-tab-btn {
+      padding: 0.45rem 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      border: none;
+      background: transparent;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .view-tab-btn.active {
+      background: #ffffff;
+      color: #059669;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    /* PDF View Container */
+    #pdfViewContainer {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+    .pdf-toolbar {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+    .pdf-frame {
+      width: 100%;
+      height: 980px;
+      border: none;
+      display: block;
+    }
+
+    /* Web Resume Container */
+    #webResumeContainer {
       background-color: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 1rem;
-      padding: 2.5rem;
+      padding: 2.25rem;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
     }
     .header-bar {
@@ -30,13 +179,13 @@
       justify-content: space-between;
       align-items: flex-start;
       border-bottom: 2px solid #059669;
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
       flex-wrap: wrap;
       gap: 1rem;
     }
     .name-title h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: -0.02em;
@@ -44,17 +193,17 @@
     .name-title p {
       color: #059669;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      margin-top: 0.25rem;
+      margin-top: 0.2rem;
     }
     .contact-links {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #475569;
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: 0.2rem;
       text-align: right;
     }
     .contact-links a {
@@ -65,80 +214,44 @@
     .contact-links a:hover {
       text-decoration: underline;
     }
-    .action-bar {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      justify-content: flex-end;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .btn-primary {
-      background: #059669;
-      color: #ffffff;
-      border: none;
-    }
-    .btn-primary:hover {
-      background: #047857;
-    }
-    .btn-secondary {
-      background: #f1f5f9;
-      color: #334155;
-      border: 1px solid #cbd5e1;
-    }
-    .btn-secondary:hover {
-      background: #e2e8f0;
-      color: #0f172a;
-    }
     .section {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .section-title {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 800;
       color: #0f172a;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       border-bottom: 1px solid #e2e8f0;
-      padding-bottom: 0.4rem;
-      margin-bottom: 1rem;
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.85rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
     .section-title span {
       color: #059669;
       font-family: 'JetBrains Mono', monospace;
     }
     .item {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
     .item-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
     .item-title {
       font-weight: 700;
       color: #0f172a;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
     .item-subtitle {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #0284c7;
       font-weight: 600;
     }
@@ -151,22 +264,22 @@
     .item ul {
       list-style-type: disc;
       padding-left: 1.25rem;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: #334155;
-      margin-top: 0.4rem;
+      margin-top: 0.35rem;
     }
     .item ul li {
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
     }
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      font-size: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.85rem;
+      font-size: 0.82rem;
     }
     .skill-cat {
       background: #f8fafc;
-      padding: 0.75rem 1rem;
+      padding: 0.65rem 0.85rem;
       border-radius: 0.5rem;
       border: 1px solid #e2e8f0;
     }
@@ -174,20 +287,130 @@
       font-weight: 800;
       color: #059669;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      margin-bottom: 0.35rem;
+      font-size: 0.78rem;
+      margin-bottom: 0.25rem;
     }
+
+    /* -------------------------------------------------------------
+       STRICT 1-PAGE PRINT STYLES (Window.print / Ctrl+P Fit to 1 Page)
+       ------------------------------------------------------------- */
     @media print {
-      body { background: #fff; color: #000; padding: 0; }
-      .resume-wrapper { border: none; box-shadow: none; background: #fff; padding: 0; color: #000; }
-      .action-bar { display: none; }
-      .name-title h1 { color: #000; }
-      .name-title p { color: #059669; }
-      .section-title { color: #000; border-bottom: 1px solid #000; }
-      .item-title { color: #000; }
-      .item-subtitle { color: #0284c7; }
-      .item ul { color: #333; }
-      .skill-cat { background: #f8fafc; border: 1px solid #e2e8f0; color: #000; }
+      @page {
+        size: A4 portrait;
+        margin: 7mm 8mm;
+      }
+      *, *::before, *::after {
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+      html, body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 7.8pt !important;
+        line-height: 1.22 !important;
+      }
+      .no-print, .action-bar, .view-tabs, .download-banner {
+        display: none !important;
+      }
+      .resume-wrapper {
+        max-width: 100% !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      #pdfViewContainer {
+        display: none !important;
+      }
+      #webResumeContainer {
+        display: block !important;
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      .header-bar {
+        padding-bottom: 3px !important;
+        margin-bottom: 5px !important;
+        border-bottom: 1.5px solid #059669 !important;
+      }
+      .name-title h1 {
+        font-size: 15pt !important;
+        line-height: 1.1 !important;
+        color: #0f172a !important;
+      }
+      .name-title p {
+        font-size: 7.2pt !important;
+        color: #059669 !important;
+        margin-top: 1px !important;
+      }
+      .contact-links {
+        font-size: 6.8pt !important;
+        gap: 0.5px !important;
+      }
+      .contact-links a {
+        color: #0284c7 !important;
+        text-decoration: none !important;
+      }
+      .section {
+        margin-bottom: 5px !important;
+        page-break-inside: avoid;
+      }
+      .section-title {
+        font-size: 8.2pt !important;
+        padding-bottom: 1px !important;
+        margin-bottom: 2px !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        color: #0f172a !important;
+      }
+      .item {
+        margin-bottom: 3px !important;
+        page-break-inside: avoid;
+      }
+      .item-header {
+        margin-bottom: 1px !important;
+      }
+      .item-title {
+        font-size: 7.8pt !important;
+        font-weight: 700 !important;
+      }
+      .item-subtitle {
+        font-size: 6.8pt !important;
+        color: #0284c7 !important;
+      }
+      .item-date {
+        font-size: 6.8pt !important;
+        color: #64748b !important;
+      }
+      .item ul {
+        margin-top: 1px !important;
+        padding-left: 12px !important;
+      }
+      .item ul li {
+        font-size: 7.2pt !important;
+        line-height: 1.18 !important;
+        margin-bottom: 1px !important;
+        color: #334155 !important;
+      }
+      .skills-grid {
+        gap: 3px !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+      .skill-cat {
+        padding: 3px 5px !important;
+        border: 1px solid #e2e8f0 !important;
+        background: #f8fafc !important;
+      }
+      .skill-cat-title {
+        font-size: 6.8pt !important;
+        margin-bottom: 1px !important;
+        color: #059669 !important;
+      }
+      .skill-cat p {
+        font-size: 6.8pt !important;
+        line-height: 1.15 !important;
+      }
     }
   </style>
 </head>
@@ -195,231 +418,310 @@
 
   <div class="resume-wrapper">
 
-    <!-- Action Bar -->
-    <div class="action-bar">
-      <a href="index.html" class="btn btn-secondary">← Back to Portfolio</a>
-      <a href="resume.pdf" target="_blank" class="btn btn-primary" download>⬇ Download Official PDF</a>
-      <button onclick="window.print()" class="btn btn-secondary">🖨 Print View</button>
+    <!-- 1. HIGH-PRIORITY 1-PAGE PDF DOWNLOAD BANNER (Always Visible at Top) -->
+    <div class="download-banner no-print">
+      <div class="banner-text">
+        <h2>📄 Official 1-Page Resume (Kundan_Saw_Resume.pdf)</h2>
+        <p>B.Tech Computer Engineering • NIAMT Ranchi (CGPA: 8.65) • Exact 1-Page Document</p>
+      </div>
+      <div class="banner-actions">
+        <!-- Direct 1-Page PDF Download Button -->
+        <button onclick="download1PagePdf()" class="btn btn-primary" id="downloadPdfBtn" title="Directly download Kundan_Saw_Resume.pdf">
+          ⬇ Download 1-Page Original PDF
+        </button>
+        <!-- 1-Page Print View -->
+        <button onclick="window.print()" class="btn btn-secondary" title="Print single-page ATS summary">
+          🖨 Print 1-Page ATS Sheet
+        </button>
+      </div>
     </div>
 
-    <!-- Header -->
-    <header class="header-bar">
-      <div class="name-title">
-        <h1>Kundan Saw</h1>
-        <p>Cybersecurity & Web3 Developer • Full-Stack Engineer • Salesforce</p>
+    <!-- Action Bar / Navigation -->
+    <div class="action-bar no-print">
+      <div class="nav-left">
+        <a href="index.html" class="btn btn-secondary">← Back to Portfolio</a>
+        <a href="resume.pdf" target="_blank" class="btn btn-secondary" title="Open PDF in browser tab">
+          Open Raw PDF ↗
+        </a>
       </div>
-      <div class="contact-links">
-        <div>📞 +91-6206597310</div>
-        <div>✉ <a href="mailto:kundansawvks786@gmail.com">kundansawvks786@gmail.com</a></div>
-        <div>🔗 <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank">linkedin.com/in/kundan-saw-35a604284</a></div>
-        <div>🐙 <a href="https://github.com/Kundan62065" target="_blank">github.com/Kundan62065</a></div>
-        <div>⚡ <a href="https://leetcode.com/u/Kundan_kumar-saw0/" target="_blank">leetcode.com/u/Kundan_kumar-saw0</a></div>
-        <div>🌐 <a href="https://kundan62065.github.io/" target="_blank">kundan62065.github.io</a></div>
-        <div>📍 Ranchi, Jharkhand, India</div>
-      </div>
-    </header>
 
-    <!-- Education -->
-    <section class="section">
-      <h2 class="section-title"><span>//</span> Education</h2>
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">B.Tech in Computer Engineering</span> — <span class="item-subtitle">NIAMT Ranchi</span>
+      <!-- View Switcher Tabs -->
+      <div class="view-tabs">
+        <button id="tabPdf" class="view-tab-btn active" onclick="switchView('pdf')">
+          📄 Original 1-Page PDF Document
+        </button>
+        <button id="tabWeb" class="view-tab-btn" onclick="switchView('web')">
+          🌐 ATS Web View (HTML)
+        </button>
+      </div>
+    </div>
+
+    <!-- VIEW 1: ORIGINAL 1-PAGE PDF VIEWER (DEFAULT) -->
+    <div id="pdfViewContainer">
+      <div class="pdf-toolbar no-print">
+        <span>Previewing: <strong>Kundan_Saw_Resume.pdf</strong> (Exact 1-Page Original)</span>
+        <button onclick="download1PagePdf()" style="background:none; border:none; color:#059669; font-weight:700; cursor:pointer; font-family:inherit;">
+          ⬇ Download File
+        </button>
+      </div>
+      <iframe src="resume.pdf#view=FitH" class="pdf-frame" title="Kundan Saw 1-Page Original Resume"></iframe>
+    </div>
+
+    <!-- VIEW 2: ATS WEB RESUME (HTML) -->
+    <div id="webResumeContainer" style="display: none;">
+
+      <!-- Header -->
+      <header class="header-bar">
+        <div class="name-title">
+          <h1>Kundan Saw</h1>
+          <p>Full-Stack Developer • Real-Time Systems • Salesforce • Web3</p>
+        </div>
+        <div class="contact-links">
+          <div>📞 +91-6206597310</div>
+          <div>✉ <a href="mailto:kundansawvks786@gmail.com">kundansawvks786@gmail.com</a></div>
+          <div>🔗 <a href="https://www.linkedin.com/in/kundan-saw-35a604284/" target="_blank">linkedin.com/in/kundan-saw-35a604284</a></div>
+          <div>🐙 <a href="https://github.com/Kundan62065" target="_blank">github.com/Kundan62065</a></div>
+          <div>⚡ <a href="https://leetcode.com/u/Kundan_kumar-saw0/" target="_blank">leetcode.com/u/Kundan_kumar-saw0</a></div>
+          <div>🌐 <a href="https://kundan62065.github.io/" target="_blank">kundan62065.github.io</a></div>
+          <div>📍 Ranchi, Jharkhand, India</div>
+        </div>
+      </header>
+
+      <!-- Education -->
+      <section class="section">
+        <h2 class="section-title"><span>//</span> Education</h2>
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">B.Tech in Computer Engineering</span> — <span class="item-subtitle">NIAMT Ranchi</span>
+            </div>
+            <span class="item-date">2023 – 2027 (Ongoing) | CGPA: 8.65</span>
           </div>
-          <span class="item-date">2023 – 2027 (Ongoing) | CGPA: 8.65</span>
         </div>
-      </div>
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">Senior Secondary (CBSE Class XII)</span> — <span class="item-subtitle">SRK D.A.V Public School, Suriya Giridih</span>
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">Senior Secondary (CBSE Class XII)</span> — <span class="item-subtitle">SRK D.A.V Public School, Suriya Giridih</span>
+            </div>
+            <span class="item-date">2022 | Score: 81%</span>
           </div>
-          <span class="item-date">2022 | Score: 81%</span>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Technical Skills -->
-    <section class="section">
-      <h2 class="section-title"><span>//</span> Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-cat">
-          <div class="skill-cat-title">Cybersecurity & Web3</div>
-          <p>Solidity 0.8.20, Web3.js, Smart Contract Auditing, Reentrancy Protection (SWC-107, CEI), Rug-pull Quorum Governance (SWC-105), Pull Payments (SWC-113), STRIDE Threat Modeling, Kali Linux, JWT, OAuth 2.0.</p>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-title">Salesforce Platform</div>
-          <p>Salesforce DX (SFDX), Apex Triggers & Handler Pattern, SOQL, Record-Triggered & Screen Flows, Organization-Wide Defaults (OWD), Profiles & Permissions, Reports & Executive Dashboards.</p>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-title">Full-Stack Development</div>
-          <p>React 18, Node.js, Express.js, Socket.IO, RESTful APIs, MongoDB Atlas, MySQL, Razorpay, Cloudinary, Tailwind CSS, Modern JavaScript (ES6+).</p>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-title">Core Languages & DevOps</div>
-          <p>Java (OOP), C, C++, Python, Git, GitHub Actions, Vercel, Render, Postman, Linux CLI, Google Colab.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section">
-      <h2 class="section-title"><span>//</span> Flagship Projects</h2>
-
-      <!-- 1. Railway Shift Management (DutyHours.in) -->
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">DutyHours.in — Indian Railways Shift & Workforce Management System</span>
-            <span class="item-subtitle">[MERN Stack, Socket.IO, JWT, ExcelJS]</span>
+      <!-- Technical Skills -->
+      <section class="section">
+        <h2 class="section-title"><span>//</span> Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-cat">
+            <div class="skill-cat-title">Real-Time & Web</div>
+            <p>React 18, Node.js, Express, Socket.IO, REST APIs, MongoDB, Razorpay, Cloudinary, Tailwind CSS, Modern JS (ES6+).</p>
           </div>
-          <span class="item-date">
-            <a href="https://www.dutyhours.in/login" target="_blank" style="color:#059669; text-decoration:none; margin-right:8px; font-weight:700;">dutyhours.in ↗</a>
-            <a href="https://github.com/Kundan62065/R_frontend" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a>
-          </span>
-        </div>
-        <ul>
-          <li>Co-engineered real-time crew shift tracking and fatigue management for locomotive staff in Indian Railways (Hatia / Eastern Division) alongside Rana Poddar.</li>
-          <li>Engineered automated fatigue threshold alerts delivered at <strong>8, 9, 11, and 14 hours</strong> via <strong>Socket.IO</strong> push events.</li>
-          <li>Implemented multi-role access control (Super Admin, Station Master, Crew) and automated Excel shift report generation.</li>
-        </ul>
-      </div>
-
-      <!-- 2. SentinelFund -->
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">SentinelFund — Secure Web3 Crowdfunding & Governance DApp</span>
-            <span class="item-subtitle">[Solidity 0.8.20, Web3.js, React 18, STRIDE]</span>
+          <div class="skill-cat">
+            <div class="skill-cat-title">Salesforce Platform</div>
+            <p>Salesforce DX (SFDX), Apex Triggers & Handlers, SOQL, Record-Triggered & Screen Flows, OWD Security Model.</p>
           </div>
-          <span class="item-date"><a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a></span>
-        </div>
-        <ul>
-          <li>Engineered an enterprise-grade defensive crowdfunding protocol defending against <strong>SWC-107 (Reentrancy)</strong> using the <strong>Checks-Effects-Interactions (CEI)</strong> pattern and nonReentrant mutex lock.</li>
-          <li>Mitigated <strong>SWC-105 rug-pull risks</strong> by replacing single-owner withdrawals with milestone spending requests requiring <strong>>50% backer quorum voting</strong>.</li>
-          <li>Eliminated <strong>SWC-113 Denial of Service</strong> attack vectors via a <strong>Pull-over-Push payment architecture</strong> for safe individual refunds.</li>
-          <li>Built a reactive Web3 dashboard with real-time SIEM event telemetry and an emergency circuit breaker.</li>
-        </ul>
-      </div>
-
-      <!-- 3. Salesforce Hospital CRM -->
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">Hospital Operations & Management CRM</span>
-            <span class="item-subtitle">[Salesforce DX, Apex Handlers, Flows, SOQL, OWD]</span>
+          <div class="skill-cat">
+            <div class="skill-cat-title">Web3 & Security</div>
+            <p>Solidity 0.8.20, Web3.js, CEI Reentrancy Shield (SWC-107), Milestone Quorum Governance (SWC-105), Pull Payments.</p>
           </div>
-          <span class="item-date"><a href="https://github.com/Kundan62065/Hospital-Management-Salesforce" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a></span>
-        </div>
-        <ul>
-          <li>Built a full clinical operations CRM managing Patients, Doctors, Departments, Appointments, and Billing.</li>
-          <li>Engineered Apex Triggers for collision-free appointment scheduling and Record-Triggered Flows for automated billing invoices.</li>
-          <li>Enforced Organization-Wide Defaults (OWD) and role-based sharing rules to ensure medical data confidentiality.</li>
-        </ul>
-      </div>
-
-      <!-- 4. MERN Note -->
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">MERN Note — Secure Cloud Workspace</span>
-            <span class="item-subtitle">[MongoDB, Express.js, React.js, Node.js, JWT, OAuth 2.0]</span>
+          <div class="skill-cat">
+            <div class="skill-cat-title">Languages & Tools</div>
+            <p>Java, C, C++, Python, Git, GitHub Actions, Vercel, Postman, Linux CLI.</p>
           </div>
-          <span class="item-date"><a href="https://github.com/Kundan62065/mern-jwt-notes-app" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a></span>
         </div>
-        <ul>
-          <li>Developed personal cloud note workspace supporting frictionless Google OAuth 2.0 and JWT token authentication.</li>
-          <li>Added real-time search, tag categorization, markdown preview, copy-to-clipboard, and session invalidation.</li>
-        </ul>
-      </div>
+      </section>
 
-      <!-- 5. Mini-eKart -->
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">Mini-eKart — Full-Stack E-Commerce Platform</span>
-            <span class="item-subtitle">[React.js, Node.js, Express.js, MongoDB Atlas, Razorpay, Cloudinary]</span>
+      <!-- Projects -->
+      <section class="section">
+        <h2 class="section-title"><span>//</span> Flagship Projects</h2>
+
+        <!-- 1. Railway Shift Management (DutyHours.in) -->
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">DutyHours.in — Indian Railways Shift & Workforce Management</span>
+              <span class="item-subtitle">[MERN, Socket.IO, JWT, ExcelJS]</span>
+            </div>
+            <span class="item-date">
+              <a href="https://www.dutyhours.in/login" target="_blank" style="color:#059669; text-decoration:none; margin-right:6px; font-weight:700;">dutyhours.in ↗</a>
+              <a href="https://github.com/Kundan62065/R_frontend" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a>
+            </span>
           </div>
-          <span class="item-date">
-            <a href="https://mini-ekart-app-wv57.vercel.app/" target="_blank" style="color:#059669; text-decoration:none; margin-right:8px; font-weight:700;">Live Demo ↗</a>
-            <a href="https://github.com/Kundan62065/MINI-EKART-APP" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a>
-          </span>
+          <ul>
+            <li>Co-engineered real-time crew shift tracking for locomotive pilots in Indian Railways (Hatia Division) alongside Rana Poddar.</li>
+            <li>Implemented automatic fatigue threshold alerts at <strong>8, 9, 11, and 14 hours</strong> using <strong>Socket.IO</strong> events and Excel duty reports.</li>
+          </ul>
         </div>
-        <ul>
-          <li>Created online shopping platform featuring dynamic product catalog, category filters, and persistent cart state.</li>
-          <li>Integrated <strong>Razorpay payment gateway</strong> for online transactions and <strong>Nodemailer</strong> for user email verification.</li>
-          <li>Utilized <strong>Multer and Cloudinary</strong> for image cloud storage and built an administrative panel for catalog CRUD operations.</li>
-        </ul>
-      </div>
 
-    </section>
+        <!-- 2. SentinelFund -->
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">SentinelFund — Secure Web3 Crowdfunding DApp</span>
+              <span class="item-subtitle">[Solidity 0.8.20, Web3.js, React 18]</span>
+            </div>
+            <span class="item-date">
+              <a href="https://kundan62065.github.io/crowdfunding-dapp/" target="_blank" style="color:#059669; text-decoration:none; margin-right:6px; font-weight:700;">Live Demo ↗</a>
+              <a href="https://github.com/Kundan62065/crowdfunding-dapp" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a>
+            </span>
+          </div>
+          <ul>
+            <li>Engineered defensive crowdfunding smart contracts with Checks-Effects-Interactions (CEI) reentrancy mutex shields.</li>
+            <li>Implemented milestone-based backer quorum voting (>50%) and pull-payment refunds to prevent rug-pulls and DoS attacks.</li>
+          </ul>
+        </div>
 
-    <!-- Leadership & Community -->
-    <section class="section">
-      <h2 class="section-title"><span>//</span> Leadership & Community Head</h2>
-      <div class="item">
-        <div class="item-header">
-          <div>
+        <!-- 3. Salesforce Hospital CRM -->
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">Hospital Operations & Management CRM</span>
+              <span class="item-subtitle">[Salesforce DX, Apex, Record Flows, SOQL, OWD]</span>
+            </div>
+            <span class="item-date">
+              <a href="https://github.com/Kundan62065/Hospital-Management-Salesforce" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a>
+            </span>
+          </div>
+          <ul>
+            <li>Built healthcare CRM on Salesforce managing Patients, Doctors, Appointments, and Billing Invoices.</li>
+            <li>Automated appointment conflict detection with Apex Triggers and invoice calculation with Record-Triggered Flows.</li>
+          </ul>
+        </div>
+
+        <!-- 4. Mini-eKart -->
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">Mini-eKart — Full-Stack E-Commerce Platform</span>
+              <span class="item-subtitle">[React, Node.js, Express, MongoDB, Razorpay, Cloudinary]</span>
+            </div>
+            <span class="item-date">
+              <a href="https://mini-ekart-app-wv57.vercel.app/" target="_blank" style="color:#059669; text-decoration:none; margin-right:6px; font-weight:700;">Live Demo ↗</a>
+              <a href="https://github.com/Kundan62065/MINI-EKART-APP" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a>
+            </span>
+          </div>
+          <ul>
+            <li>Online store with product catalog filters, Razorpay payment gateway integration, and Cloudinary media storage.</li>
+          </ul>
+        </div>
+
+        <!-- 5. MERN Note -->
+        <div class="item">
+          <div class="item-header">
+            <div>
+              <span class="item-title">MERN Note — Cloud Productivity Application</span>
+              <span class="item-subtitle">[React, Node.js, Express, MongoDB, JWT, Google OAuth]</span>
+            </div>
+            <span class="item-date">
+              <a href="https://github.com/Kundan62065/mern-jwt-notes-app" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">GitHub ↗</a>
+            </span>
+          </div>
+          <ul>
+            <li>Cloud notes workspace featuring Google OAuth 2.0, JWT token validation, and instant tag searching.</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- Leadership & Community -->
+      <section class="section">
+        <h2 class="section-title"><span>//</span> Leadership & Roles</h2>
+        <div class="item">
+          <div class="item-header">
             <span class="item-title">Technical Leader — Code Forge (NIAMT Ranchi)</span>
+            <span class="item-date">Web & Blockchain Mentorship</span>
           </div>
-          <span class="item-date">Community of Cybersecurity & Blockchain</span>
+          <p style="font-size:0.8rem; color:#475569;">Conducted workshops on smart contract development and web engineering for 100+ students.</p>
         </div>
-        <p style="font-size:0.85rem; color:#475569;">Led workshops on smart contract security, secure coding practices, and defensive blockchain architecture for 100+ students.</p>
-      </div>
 
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">Cybersecurity Awareness Programs — Campus & Community Outreach</span>
-          </div>
-          <span class="item-date">Speaker & Coordinator</span>
-        </div>
-        <p style="font-size:0.85rem; color:#475569;">Conducted live awareness drives demonstrating phishing prevention, multi-factor security, and safe Web3 transaction hygiene.</p>
-      </div>
-
-      <div class="item">
-        <div class="item-header">
-          <div>
+        <div class="item">
+          <div class="item-header">
             <span class="item-title">Sports Secretary — SFU Gymkhana (NIAMT Ranchi)</span>
+            <span class="item-date">2025 – 2026</span>
           </div>
-          <span class="item-date">2025 – 2026</span>
+          <p style="font-size:0.8rem; color:#475569;">Managed campus athletic operations, tournament logistics, and university football and chess teams.</p>
         </div>
-        <p style="font-size:0.85rem; color:#475569;">Headed campus athletic operations, budgeting, and tournament logistics. Winner & runner-up in Football and Chess championships.</p>
-      </div>
 
-      <div class="item">
-        <div class="item-header">
-          <div>
+        <div class="item">
+          <div class="item-header">
             <span class="item-title">Cultural Head — Mission Kartavya Foundation (NGO)</span>
+            <span class="item-date">Community Welfare</span>
           </div>
-          <span class="item-date">Community Welfare</span>
+          <p style="font-size:0.8rem; color:#475569;">Led educational outreach introducing digital tools and computer literacy to underprivileged students.</p>
         </div>
-        <p style="font-size:0.85rem; color:#475569;">Spearheaded Kartavya-Tech educational programs introducing computer literacy and digital tools to underprivileged students.</p>
-      </div>
+      </section>
 
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <span class="item-title">Active Member — IEEE Student Branch (NIAMT Ranchi)</span>
-          </div>
-          <span class="item-date">Technical Seminars & Hackathons</span>
-        </div>
-      </div>
-    </section>
+      <!-- Certifications -->
+      <section class="section">
+        <h2 class="section-title"><span>//</span> Certifications</h2>
+        <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 0.8rem; color: #334155;">
+          <li><strong>Salesforce CRM Developer Certification</strong> — Teqfocus, Ranchi</li>
+          <li><strong>Indian Railways Shift Project Certification</strong> — Hatia Division (Eastern Railway)</li>
+          <li><strong>Full Stack Web Development Certification</strong> — Internshala</li>
+        </ul>
+      </section>
 
-    <!-- Certifications -->
-    <section class="section">
-      <h2 class="section-title"><span>//</span> Certifications</h2>
-      <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 0.85rem; color: #334155;">
-        <li><strong>Salesforce CRM Developer Certification</strong> — Teqfocus, Ranchi</li>
-        <li><strong>Railway Shift Project Certification</strong> — Hatia Ranchi (Eastern Division, Indian Railways)</li>
-        <li><strong>Cybersecurity & Blockchain Architecture Certification</strong> — NIAMT Ranchi</li>
-        <li><strong>Full Stack Web Development Certification</strong> — Internshala</li>
-      </ul>
-    </section>
+    </div>
 
   </div>
+
+  <script>
+    // -------------------------------------------------------------
+    // 1. Direct 1-Page Original PDF Download
+    // -------------------------------------------------------------
+    async function download1PagePdf() {
+      const btn = document.getElementById('downloadPdfBtn');
+      const originalText = btn ? btn.innerHTML : '';
+      if (btn) btn.innerHTML = '⏳ Downloading...';
+      
+      try {
+        const res = await fetch('resume.pdf');
+        if (!res.ok) throw new Error('Fetch failed');
+        const blob = await res.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Kundan_Saw_Resume.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => window.URL.revokeObjectURL(url), 2000);
+        if (btn) btn.innerHTML = '✔ Downloaded!';
+        setTimeout(() => { if (btn) btn.innerHTML = originalText; }, 2000);
+      } catch (err) {
+        // Direct link fallback
+        const a = document.createElement('a');
+        a.href = 'resume.pdf';
+        a.download = 'Kundan_Saw_Resume.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        if (btn) btn.innerHTML = originalText;
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 2. View Switcher (Original 1-Page PDF vs ATS Web View)
+    // -------------------------------------------------------------
+    function switchView(view) {
+      const tabPdf = document.getElementById('tabPdf');
+      const tabWeb = document.getElementById('tabWeb');
+      const pdfContainer = document.getElementById('pdfViewContainer');
+      const webContainer = document.getElementById('webResumeContainer');
+
+      if (view === 'pdf') {
+        tabPdf.classList.add('active');
+        tabWeb.classList.remove('active');
+        pdfContainer.style.display = 'block';
+        webContainer.style.display = 'none';
+      } else {
+        tabWeb.classList.add('active');
+        tabPdf.classList.remove('active');
+        pdfContainer.style.display = 'none';
+        webContainer.style.display = 'block';
+      }
+    }
+  </script>
 
 </body>
 </html>
